@@ -17,3 +17,7 @@ nav .mypageAll .mpList li:first-child { display: flex; align-items: center; }
 nav .mypageAll .mpList a { color: #fff; }
 
 nav .adminAll { display: none; align-items: center; font-family: pSemi; font-size: 15px; }
+
+/* --------------------- footer --------------------------- */
+footer { display:flex; align-items: center; flex-direction: column; padding: 20px 0; height: 90px; font-size: 13px; font-family: pLight; background: #a9a9a95c;}
+footer img { width: 150px;}
