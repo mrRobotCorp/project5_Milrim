@@ -100,7 +100,7 @@ section {
 }
 
 body {
-    font-family: nRegular;
+    font-family: pMedium;
     line-height: 1;
     word-break: keep-all;
 }
@@ -154,7 +154,7 @@ input, button, textarea {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #212121;
+    background-color: #00539C;
     border-radius: 10px;
 }
 
@@ -165,26 +165,26 @@ input, button, textarea {
 
 /* ------------------  font ------------------------ */
 @font-face {
-    font-family: nThin;
-    src: url(../source/font/NotoSansKR-Thin.otf);
+    font-family: pLight;
+    src: url(../source/font/Pretendard-Light.otf);
 }
 @font-face {
-    font-family: nLight;
-    src: url(../source/font/NotoSansKR-Light.otf);
+    font-family: pRegular;
+    src: url(../source/font/Pretendard-Regular.otf);
 }
 @font-face {
-    font-family: nRegular;
-    src: url(../source/font/NotoSansKR-Regular.otf);
+    font-family: pMedium;
+    src: url(../source/font/Pretendard-Medium.otf);
 }
 @font-face {
-    font-family: nMedium;
-    src: url(../source/font/NotoSansKR-Medium.otf);
+    font-family: pSemi;
+    src: url(../source/font/Pretendard-SemiBold.otf);
 }
 @font-face {
-    font-family: nBold;
-    src: url(../source/font/NotoSansKR-Bold.otf);
+    font-family: pBold;
+    src: url(../source/font/Pretendard-ExtraBold.otf);
 }
 @font-face {
-    font-family: nBlack;
-    src: url(../source/font/NotoSansKR-Black.otf);
+    font-family: pBlack;
+    src: url(../source/font/Pretendard-Black.otf);
 }
