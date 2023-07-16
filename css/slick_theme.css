@@ -200,8 +200,8 @@
     bottom: 70px;
     left: 0;
 
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
 
     content: '';
     text-align: center;
@@ -211,12 +211,13 @@
     background-color: #fff;
     box-shadow: 0 0 8px #888;
     border-radius: 50%;
+    transition: all .2s;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-    opacity: .75;
+    opacity: 1;
     color: black;
 }

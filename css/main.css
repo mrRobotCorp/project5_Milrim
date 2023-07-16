@@ -3,6 +3,6 @@ section.banner .bn { height: 70vh; margin-top: 80px;}
 
 /* ------------------ search --------------------- */
 input[name="tag"] {display: none;}
-input[name="tag"] + label { padding: 5px 15px; border-radius: 20px; border: 1.5px solid #999; cursor: pointer; transition: all .3s;}
+input[name="tag"] + label { padding: 5px 15px; margin-right: 5px; border-radius: 20px; border: 1.5px solid #999; font-size: 15px; cursor: pointer; transition: all .3s;}
 input[name="tag"]:checked + label { background: #fffcd6; border-color: var(--color-sub);}
 
