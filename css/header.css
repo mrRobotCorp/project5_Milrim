@@ -4,7 +4,7 @@ header { position: fixed; top: 0; z-index: 100; width: 100%; background: #fff; b
 header nav { height: 80px; display: flex; justify-content: space-between; align-items: center; padding: 0 6%; font-size: 15px;  } 
 
 nav .gnb { display: flex; align-items: center; font-family: pSemi; }
-nav .headLogo { width: 150px; margin-right: 20px; }
+nav .headLogo { width: 130px; margin-right: 20px; }
 
 nav .mypageAll .myProfile { display: flex; align-items: center; cursor: pointer;}
 nav .profImg { width: 30px; margin-right: 10px; border-radius: 50%;}
