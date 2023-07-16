@@ -65,7 +65,7 @@
 
 .slick-prev:hover:before,
 .slick-next:hover:before {
-    background-color: #ffffff75;
+    background-color: #ffffff9e;
 }
 
 .slick-prev
@@ -197,7 +197,7 @@
     line-height: 20px;
 
     position: absolute;
-    top: 0;
+    bottom: 70px;
     left: 0;
 
     width: 10px;
@@ -207,8 +207,9 @@
     text-align: center;
     z-index: 3;
 
-    opacity: .25;
-    background-color: #000;
+    opacity: .5;
+    background-color: #fff;
+    box-shadow: 0 0 8px #888;
     border-radius: 50%;
 
     -webkit-font-smoothing: antialiased;
