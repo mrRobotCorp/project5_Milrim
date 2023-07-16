@@ -1,11 +1,11 @@
 @import './reset.css';
 
-main { min-height: calc(100vh - 130px); display: flex; align-items: center; justify-content: center; flex-direction: column; background: url(../source/mainBg.png) center center; background-size: cover; }
+main { min-height: calc(100vh - 130px); display: flex; align-items: center; justify-content: center; flex-direction: column; background: url(../source/mainBg2.png) center center; background-size: cover; }
 
 .mainComm { text-align: center; color: #fff;}
 .mainComm .mainLogo img { width: 180px; }
 .mainComm p { letter-spacing: 3px;}
 
-.startBtn { display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 300px; height: 60px; font-family: pBold; font-size: 17px; border-radius: 8px; background: var(--color-sub); cursor: pointer;}
-.regBtn { position: relative; margin-top: 15px; font-size: 14px; color: #fff;}
-.regBtn:after { content: ''; position: absolute; bottom: -3px; left: -2px; width: 77px; height: 0.7px; background: #fff;}
+.startBtn { display: flex; justify-content: center; align-items: center; margin-top: 20px; width: 330px; height: 60px; font-family: pBold; font-size: 18px; border-radius: 8px; background: var(--color-sub); cursor: pointer;}
+.regBtn { position: relative; margin-top: 15px; font-size: 14px; color: #fff; letter-spacing: 1px;}
+.regBtn:after { content: ''; position: absolute; bottom: -3px; left: -2px; width: 82px; height: 0.7px; background: #fff;}

@@ -65,7 +65,7 @@
 
 .slick-prev:hover:before,
 .slick-next:hover:before {
-    background-color: #ffffff9e;
+    background-color: #ffffff7a;
 }
 
 .slick-prev
@@ -87,10 +87,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 30px;
-    background-color: #ffffff3e;
+    opacity: .6;
+    background-color: #ffffff89;
     content: url(../source/arrow_l.png); 
 }
 [dir='rtl'] .slick-prev:before
@@ -117,10 +118,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border-radius: 30px;
-    background-color: #ffffff3e;
+    opacity: .6;
+    background-color: #ffffff89;
     content: url(../source/arrow_r.png); 
     /* 슬라이드 이동 버튼 이미지로 변경 */
 }
@@ -197,7 +199,7 @@
     line-height: 20px;
 
     position: absolute;
-    bottom: 70px;
+    bottom: 120px;
     left: 0;
 
     width: 13px;

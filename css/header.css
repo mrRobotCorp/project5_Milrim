@@ -6,7 +6,7 @@ header nav { height: 80px; display: flex; justify-content: space-between; align-
 nav .gnb { display: flex; align-items: center; font-family: pSemi; }
 nav .headLogo { width: 130px; margin-right: 20px; }
 
-nav .mypageAll .myProfile { display: flex; align-items: center; cursor: pointer;}
+nav .mypageAll .myProfile { height: 50px; display: flex; align-items: center; cursor: pointer;}
 nav .profImg { width: 30px; margin-right: 10px; border-radius: 50%;}
 
 nav .mypageAll .mpList { display: none; position: absolute; top: 80%; right: 4.5%; padding: 5px 22px; color: #fff; background: var(--color-main); border-radius: 7px; box-shadow: 0 0 10px rgba(83, 83, 83, 0.29); font-family: pRegular; }

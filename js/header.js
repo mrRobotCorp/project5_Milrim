@@ -11,6 +11,15 @@ myProfile.addEventListener("mouseleave", function() {
     mpList.classList.remove("active");
 });
 
+mpList.addEventListener("mouseover", function() {
+    mpList.classList.add("active");
+});
+
+mpList.addEventListener("mouseleave", function() {
+    mpList.classList.remove("active");
+});
+
+// -------------------------------------
 const loc = window.location.href;
 
 if(loc.includes("home")) {

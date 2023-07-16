@@ -146,7 +146,7 @@ input, button, textarea {
 :root { --color-main : #00539C; --color-sub:#FFD662; --color-line : #c9c9c9; } 
 
 ::selection {
-    background-color: #ffe59e;
+    background-color: #ffd5628e;
 }
 
 ::-webkit-scrollbar {
