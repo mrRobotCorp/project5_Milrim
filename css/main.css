@@ -1,10 +1,6 @@
 section.banner .bn { height: 80vh; margin: 80px 0 50px 0; }
 
-/* ------------------ search --------------------- */
-input[name="tag"] {display: none;}
-input[name="tag"] + label { padding: 5px 15px; margin-right: 5px; border-radius: 20px; border: 1.5px solid #333; font-size: 15px; cursor: pointer; transition: all .2s;}
-input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-color: var(--color-sub);}
-
+/* ------------------ banner --------------------- */
 .bContent { width: 100%; height: 100%; display: flex; align-items: center; background-repeat: no-repeat; }
 .bContent01 {  background: url(../source/banner01.jpg) center center; background-size: cover; }
 .bContent02 { background: url(../source/banner02.jpg) center center; background-size: cover; }
@@ -13,19 +9,26 @@ input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-
 
 .bContent p { margin-left: 200px; color: #fff; text-shadow: 1px 1px 4px #33333393; font-size: 27px; font-family: pBold; }
 
-/* ------------------------------------------------- */
-section.inner { padding: 0 6%; }
+/* ------------------ search --------------------- */
+section.inner { padding: 0 10%; }
 
-.textSch { display: flex; align-items: center; height: 40px; width: 500px; border: 1px solid #999; border-radius: 20px;}
+.textSch { padding: 10px; display: flex; align-items: center; height: 40px; width: 100%; border-bottom: 1px solid #999;}
+.textSch input { background: #fffcd6; padding: 0 15px; width: 100%; background: transparent; font-family: pMedium; font-size: 17px;}
+.textSch button { margin-right: 20px; width: 30px; height: 30px; background: url(../source/searchIco.png) center center no-repeat; background-size: cover; cursor: pointer;}
 
-.textSch input { padding: 0 15px; width: 100%; background: transparent; font-family: pMedium; font-size: 15px;}
-.textSch button { margin-right: 20px; width: 25px; height: 25px; background: url(../source/searchIco.png) center center no-repeat; background-size: cover; cursor: pointer;}
+.tagSch { margin-top: 30px; }
+input[name="tag"] {display: none;}
+input[name="tag"] + label { padding: 5px 15px; margin-right: 5px; border-radius: 20px; border: 1.5px solid #333; font-size: 17px; font-family: pLight; cursor: pointer; transition: all .2s;}
+input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-color: #bea214;}
+
 
 /* ----------------- day list --------------------- */
-.dayListAll { margin-top: 30px; display: flex; justify-content: space-between; align-items: flex-start; }
-.dayListAll .dayList { padding: 10px 15px; border-radius: 10px;}
+.dayListAll { margin: 50px 0; display: flex; justify-content: space-between; align-items: flex-start; }
+.dayListAll .dayList { padding: 10px 15px; border: 1px solid #ddd; border-radius: 10px; }
 .dayListAll .dayList h4 { padding: 5px 10px; font-family: pBold; font-size: 17px; text-align: center;}
 .dayListAll .dayList ul li { margin: 10px 0; display: flex; flex-direction: column; }
+.dayListAll .dayList ul li span { margin-left: 5px; font-size: 15px; }
 
-.dayListAll .dayList a { display: flex; align-items: center; justify-content: center; width: 160px; height: 100px; overflow: hidden; }
-.dayListAll .dayList .thumbnail { height: 100%; }
+.dayListAll .dayList a { margin-bottom: 10px; display: flex; align-items: center; justify-content: center; width: 160px; height: 100px; border-radius: 6px;  overflow: hidden; }
+.dayListAll .dayList .thumbnail { height: 100%; transition: all .3s;}
+.dayListAll .dayList a:hover .thumbnail { height: 110%; }

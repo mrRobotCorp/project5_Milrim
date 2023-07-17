@@ -6,12 +6,10 @@ const dayList = document.querySelectorAll(".dayList");
 
 for(let i=0; i<7; i++) {
     if(day == i+1) {
-        dayList[i].style.background = "#ffd5628e";
+        dayList[i].style.background = "#fffcd6";
+        dayList[i].style.border = "none";
     }
 };
-
-
-
 
 $(document).ready(function(){
     $('.slider').slick({
