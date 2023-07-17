@@ -1,0 +1,2 @@
+main { margin-top: 100px; display: flex; flex-direction: column; align-items: center; }
+main .playContent video { width: 900px;}

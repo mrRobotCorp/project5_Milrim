@@ -19,7 +19,7 @@ section.inner { padding: 0 10%; }
 .tagSch { margin-top: 30px; }
 input[name="tag"] {display: none;}
 input[name="tag"] + label { padding: 5px 15px; margin-right: 5px; border-radius: 20px; border: 1.5px solid #333; font-size: 17px; font-family: pLight; cursor: pointer; transition: all .2s;}
-input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-color: #bea214;}
+input[name="tag"]:checked + label { color: #897200; background: #fefab4; border-color: #bea214;}
 
 
 /* ----------------- day list --------------------- */
