@@ -29,6 +29,6 @@ input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-
 .dayListAll .dayList ul li { margin: 10px 0; display: flex; flex-direction: column; }
 .dayListAll .dayList ul li span { margin-left: 5px; font-size: 15px; }
 
-.dayListAll .dayList a { margin-bottom: 10px; display: flex; align-items: center; justify-content: center; width: 160px; height: 100px; border-radius: 6px;  overflow: hidden; }
+.dayListAll .dayList a { margin-bottom: 10px; display: flex; align-items: center; justify-content: center; width: calc(100vw * 170 / 1920); height: calc(100vw * 110 / 1920); border-radius: 6px;  overflow: hidden; }
 .dayListAll .dayList .thumbnail { height: 100%; transition: all .3s;}
 .dayListAll .dayList a:hover .thumbnail { height: 110%; }
