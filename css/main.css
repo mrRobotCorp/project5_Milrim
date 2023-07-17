@@ -13,3 +13,8 @@ input[name="tag"]:checked + label { color: #897200; background: #fffcd6; border-
 
 .bContent p { margin-left: 200px; color: #fff; text-shadow: 1px 1px 4px #33333393; font-size: 27px; font-family: pBold; }
 
+/* ------------------------------------------------- */
+section.inner { padding: 0 6%; }
+
+.textSch { display: flex; align-items: center; height: 40px; width: 500px; border: 1px solid #999; border-radius: 20px;}
+.textSch input { background: transparent; font-family: pMedium; font-size: 15px;}
