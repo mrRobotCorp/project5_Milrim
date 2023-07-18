@@ -14,7 +14,12 @@ for(let i=0; i<7; i++) {
     }
 };
 
-AOS.init();
+AOS.init({
+    once: true,
+});
+$(window).on('load', function () {
+    AOS.refresh();
+});
 
 // ----- slider ------
 $(document).ready(function(){
