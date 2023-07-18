@@ -6,6 +6,7 @@ section.banner .bn { height: 80vh; margin: 80px 0 50px 0; }
 .bContent02 { background: url(../source/banner02.jpg) center center; background-size: cover; }
 .bContent03 { background: url(../source/banner03.jpg) center center; background-size: cover; }
 .bContent04 { background: url(../source/banner04.jpg) center center; background-size: cover; }
+.bContent05 { background: url(../source/banner05.jpg) center center; background-size: cover; }
 
 .bContent p { margin-left: 200px; color: #fff; text-shadow: 1px 1px 4px #33333393; font-size: 27px; font-family: pBold; }
 

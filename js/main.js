@@ -14,6 +14,8 @@ for(let i=0; i<7; i++) {
     }
 };
 
+AOS.init();
+
 // ----- slider ------
 $(document).ready(function(){
     $('.slider').slick({
