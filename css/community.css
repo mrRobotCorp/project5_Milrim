@@ -1,0 +1,74 @@
+section { padding-top: 25px; width: calc(100vw * 1100 / 1920); margin: 0 auto; } 
+section .postSchBox { margin-bottom: 27px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease; } 
+section .postSchBox input { width: 90%; background: transparent; font-family: nRegular; font-size: 15px; } 
+section .postSchBox button { width: 20px; height: 20px; margin-right: 10px; background: url(../source/searchIco.png) center center; background-size: cover; cursor: pointer; } 
+section .postSchBox:focus-within { background: #fff; border: 2px solid var(--color-main); } 
+
+section .postAll.active { display: block; }
+section .postAll { display: none; padding: 30px 25px; margin-bottom: 20px; background: #fff; border-radius: 15px; box-shadow: 0px 0px 9px #62626244; } 
+section .postAll .postTop { position: relative; display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 1px solid #c3c3c3; } 
+section .postAll .postUserInfo { display: flex; align-items: center; } 
+section .postAll .postUserImg { width: 35px; margin-right: 15px; border-radius: 50%; } 
+section .postAll .postUserTxt { display: inline-block; } 
+section .postAll .postUserTxt span:first-child { font-size: 15px; font-family: nMedium; } 
+section .postAll .postUserTxt .puId { font-size: 12px; color: #777; } 
+section .postAll .postUserTxt p { margin-top: 6px; font-size: 12px; color: #777; } 
+section .postAll .postMore { position: relative; cursor: pointer; } 
+section .postAll .postMore:hover span { background: #888; } 
+section .postAll .postMore span { display: inline-block; margin-right: 2px; width: 4px; height: 4px; background-color: #333; border-radius: 10px; transition: all .3s; } 
+section .postAll .moreList { display: none; position: absolute; top: 60%; right: -3%; padding: 5px 0; background: #fff; border: 1px solid #c3c3c3a1; box-shadow: 0 0 7px #c3c3c3ac; border-radius: 10px; } 
+section .postAll .moreList.active { display: block; } 
+section .postAll .moreList li { padding: 10px 15px; font-size: 14px; text-align: center; border-bottom: 1px solid #c3c3c380; cursor: pointer; transition: all .2s ease; font-family: nRegular; } 
+section .postAll .moreList li:last-child { border: none; } 
+section .postAll .moreList li:hover { color: var(--color-main); font-family: nMedium; } 
+
+section .postAll .pContent { padding: 25px 10px; font-size: 16px; line-height: 150%; } 
+
+section .postAll .postBottom { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #c3c3c3; } 
+section .postAll .postBtnAll { display: flex; align-items: center; } 
+section .postBottom button { display: flex; align-items: center; justify-content: center; padding: 0; background: #fff; cursor: pointer; } 
+
+section .postBottom .cmmtBtn div { display: flex; align-items: center; justify-content: center; background: #fff; width: 35px; height: 35px; transition: all .3s ease; } 
+section .postBottom .cmmtBtn div:hover { background: #ffebce; border-radius: 7px; transition: all .4s ease-out; } 
+section .postBottom .cmmtBtn img { width: 27px; } 
+
+section .postBottom .like { width: 60px; height: 60px; padding-bottom: 5px; background: url("../source/likeBtn.png") no-repeat; transition: background-position 1s steps(28); transition-duration: 0s; } 
+section .postBottom .like.active { transition-duration: 1s; background-position: -1834px 0; } 
+
+section .postBottom .tags span { background: #ffe1b8; color: #00000096; padding: 4px 12px; font-size: 13px; border-radius: 12px; text-align: center; } 
+
+section .disCommt { display: none; } 
+section .disCommt.active { display: block; } 
+section .disCommt > span:nth-child(2n+1) { margin-left: 7px; font-size: 15px; font-family: nMedium; } 
+section .disCommt span:nth-child(2n) { font-size: 13px; } 
+section .disCommt form { width: 100%; margin: 15px 3px 20px 3px; display: flex; align-items: center; justify-content: space-between; } 
+section .disCommt form textarea { width: 100%; height: 50px; padding: 15px 20px; background: #ececec; font-family: nRegular; border-radius: 10px 0 0 10px; transition: all .3s ease; outline: 2px solid transparent; resize: none; } 
+section .disCommt form textarea:focus { background: #fff; outline: 2px solid var(--color-main); } 
+section .disCommt form .addCmmtBtn { height: 80px; width: 60px; color: #fff; background: var(--color-main); border-radius: 0 10px 10px 0; font-family: nMedium; cursor: pointer; outline: 2px solid transparent; transition: all .22s ease; } 
+section .disCommt form textarea:focus ~ .addCmmtBtn { outline: 2px solid var(--color-main); } 
+
+section .disCommt .cmmtUser { position: relative; padding: 15px 0; margin-top: 10px; display: flex; align-items: center; justify-content: flex-start; border-top: 1px solid #c3c3c3; } 
+section .disCommt .cmmtUserImg { width: 33px; margin: 0 18px 0 5px; border-radius: 50%; border: 2px solid var(--color-main); } 
+section .disCommt .cmmtUserTxt span:first-child { font-family: nMedium; font-size: 14px; } 
+section .disCommt .cmmtUserTxt span:nth-child(2) { font-size: 11px; color: #777; } 
+section .disCommt .cmmtUserTxt .cmmtCon { padding: 10px 0; font-size: 14px; font-family: nLight; line-height: 120%; } 
+section .disCommt .cmmtMore { position: absolute; right: 12px; top: 15px; cursor: pointer; } 
+section .disCommt .cmmtMore:hover span { background: #888; } 
+section .disCommt .cmmtMore span { display: inline-block; margin-right: 2px; width: 4px; height: 4px; background-color: #555; border-radius: 10px; transition: all .3s; } 
+section .disCommt .cmmtMoreList { display: none; position: absolute; top: 50%; right: -1.5%; padding: 5px 0; background: #fff; border: 1px solid #c3c3c3a1; box-shadow: 0 0 7px #c3c3c3ac; border-radius: 10px; z-index: 500; } 
+.disCommt .cmmtMoreList li { padding: 10px 14px; font-size: 13px; text-align: center; border-bottom: 1px solid #c3c3c380; cursor: pointer; transition: all .2s ease; } 
+.disCommt .cmmtMoreList li:last-child { border: none; } 
+.disCommt .cmmtMoreList li:hover { color: var(--color-main); font-family: nMedium; } 
+.disCommt .cmmtMoreList.active { display: block; } 
+
+/* -------------------------------------------- */
+.morePost { position: relative; display: block; cursor: pointer; width: 140px; height: auto; margin: 50px auto; background: transparent; padding: 0; } 
+.morePost .circle { transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); position: relative; display: block; margin: 0; width: 35px; height: 35px; background: #fff; border: 1.5px solid #333; border-radius: 50px; } 
+.morePost .circle .icon { transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); position: absolute; top: 0; bottom: 0; margin: auto; background: #333; } 
+.morePost .circle .icon.arrow { transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); top: -13px; left: 18px; width: 1.5px; height: 16px; background: none; } 
+.morePost .circle .icon.arrow::before { position: absolute; content: ""; top: 5px; left: -5px; width: 9px; height: 9px; border-bottom: 0.125rem solid #333; border-right: 0.125rem solid #333; transform: rotate(45deg); } 
+.morePost .moreTxt { transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); position: absolute; top: 0; right: 14%; bottom: 0; padding: 8px 0; color: #333; font-family: nMedium; text-align: center; text-transform: uppercase; } 
+.morePost:hover .circle { width: 100%; background-color: var(--color-main); border: transparent; } 
+.morePost:hover .circle .icon.arrow { background: #fff; transform: translate(0, 40%); } 
+.morePost:hover .circle .icon.arrow::before { border-color: #fff; } 
+.morePost:hover .moreTxt { color: #fff; } 
