@@ -19,10 +19,17 @@ section.inner { width: calc(100vw * 1500 / 1920 ); margin: 0 auto; }
 .textSch button { margin-right: 30px; width: 30px; height: 30px; background: url(../source/searchIco.png) center center no-repeat; background-size: cover; cursor: pointer;}
 
 .tagSch { margin-top: 20px; display: flex; flex-wrap: wrap; }
-input[name="tag"] {display: none;}
 input[name="tag"] + label { padding: 7px 15px; margin: 10px 5px 0 0; border-radius: 20px; border: 1.5px solid #333; font-size: 17px; font-family: pLight; cursor: pointer; transition: all .2s;}
-input[name="tag"]:checked + label { color: #897200; background: #fefab4; border-color: #bea214;}
 
+input[name="tag"] {
+    display: none;
+}
+
+input[name="tag"]:checked+label {
+    color: #897200;
+    background: #fefab4;
+    border-color: #bea214;
+}
 
 /* ----------------- day list --------------------- */
 .dayListAll { margin: 50px 0; display: flex; justify-content: space-between; align-items: flex-start; }

@@ -94,6 +94,7 @@
     background-color: #ffffff89;
     content: url(../source/arrow_l.png); 
 }
+
 [dir='rtl'] .slick-prev:before
 {
     content: '→';
@@ -124,7 +125,6 @@
     opacity: .6;
     background-color: #ffffff89;
     content: url(../source/arrow_r.png); 
-    /* 슬라이드 이동 버튼 이미지로 변경 */
 }
 [dir='rtl'] .slick-next:before
 {

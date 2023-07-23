@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => { 
+    
     const player = new Plyr('#player');
     window.player = player;
 
@@ -7,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     starBtn.onclick = function() {
         this.classList.toggle("active");
     }
-
   
     // ---------- 공유 버튼 (링크 복사) -------------
+
     const url = window.document.location.href;
     const sBtn = document.querySelector(".shareBtn");
     
