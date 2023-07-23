@@ -1,7 +1,7 @@
+    
 const myProfile = document.querySelector(".myProfile");
 const mpList = document.querySelector(".mpList");
-const mypageAll = document.querySelector(".mypageAll");
-const adminAll = document.querySelector(".adminAll");
+
 
 myProfile.addEventListener("mouseover", function() {
     mpList.classList.add("active");
@@ -20,6 +20,8 @@ mpList.addEventListener("mouseleave", function() {
 });
 
 // -------------------------------------
+const mypageAll = document.querySelector(".mypageAll");
+const adminAll = document.querySelector(".adminAll");
 const loc = window.location.href;
 
 if(loc.includes("home")) {
