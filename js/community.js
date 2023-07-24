@@ -2,17 +2,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     
     const postAll = document.querySelectorAll(".postAll");
-    const morePost = document.querySelectorAll(".morePost");
+    const morePost = document.querySelector(".morePost");
     const section = document.querySelector(".postSection");
 
     // -----------------------------------------------
-    // document.getElementById("scrollTop").onclick = function () {
-    //     window.scrollTo({
-    //         top: 0,
-    //         left: 0,
-    //         behavior: 'smooth'
-    //     });
-    // };
+    document.getElementById("scrollTop").onclick = function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    };
 
     // ---------------- post hide -------------------
     const hideBtn = document.querySelectorAll(".hide");
@@ -114,19 +114,19 @@ $(document).ready(function () {
     
     
     // ---------------------- scrollTop ------------------------------
-    // const Height = $("#scrollTop").height();
-    // $("#scrollTop").hide();
+    const Height = $("#scrollTop").height();
+    $("#scrollTop").hide();
 
-    // $(window).scroll(function () {
-    //     var rolling = $(this).scrollTop() >= Height;
-    //     if (rolling) {
-    //         $("#scrollTop").fadeIn(500).css({ "position": "fixed" });
-    //     }
-    //     else {
-    //         $("#scrollTop").fadeOut(300);
-    //     }
+    $(window).scroll(function () {
+        var rolling = $(this).scrollTop() >= Height;
+        if (rolling) {
+            $("#scrollTop").fadeIn(500).css({ "position": "fixed" });
+        }
+        else {
+            $("#scrollTop").fadeOut(300);
+        }
 
-    // });
+    });
 
 
 

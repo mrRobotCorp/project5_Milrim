@@ -84,5 +84,5 @@ section .disCommt .cmmtMoreList { display: none; position: absolute; top: 50%; r
 /* --------------- scrollTop --------------- */
 #scrollTop { background: #fff; box-shadow: 0 1.7px calc(100vw * 4 / 1920) #6d6d6d7e; color: #000; align-content: center; width: 40px; height: 40px; border-radius: calc(100vw * 50 / 1920); text-align: center; font-size: 10px; bottom: calc(100vw * 50 / 1920); right: calc(100vw * 170 / 1920); position: fixed; z-index: 300; cursor: pointer; } 
 #scrollTop:hover { transition: 0.5s ease; background-color: #e7e7e7; } 
-#scrollTop::before { content: "\2303"; position: absolute; top: 6px; left: 16px; color: #000; font-size: calc(100vw * 20 / 1920); } 
+#scrollTop::before { content: "\2303"; position: absolute; top: 6px; left: 13px; color: #000; font-size: 19px; } 
 #scrollTop .topTxt { display: block; margin-top: 17px; font-size: 12px; font-family: pMedium; } 
