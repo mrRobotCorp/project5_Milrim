@@ -22,6 +22,7 @@
 	<link href="./css/header.css" rel="stylesheet">
 	<link href="./css/css_bs/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/css_bs/styles.css" rel="stylesheet">
+	<link href="./css/admin.css" rel="stylesheet">
 
 </head>
 <body>
@@ -65,92 +66,36 @@
     </header>
 	<div class="col-sm-3 col-lg-2 sidebar">
 		<ul class="nav menu">
-			<li class="active"><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
+			<li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
 			<li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
 			<li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
 		</ul>
 	</div>
-		
-	<section class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-		
-		<div class="panel panel-container">
-			<div class="row">
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-teal panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
-							<div class="large">120</div>
-							<div class="text-muted">New Orders</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-blue panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-comments color-orange"></em>
-							<div class="large">52</div>
-							<div class="text-muted">Comments</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-orange panel-widget border-right">
-						<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
-							<div class="large">24</div>
-							<div class="text-muted">New Users</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
-					<div class="panel panel-red panel-widget ">
-						<div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
-							<div class="large">25.2k</div>
-							<div class="text-muted">Page Views</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.row-->
-		</div>
-		
-		<div class="row">
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>New Orders</h4>
-						<div class="easypiechart" id="easypiechart-blue" data-percent="92" ><span class="percent">92%</span></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Comments</h4>
-						<div class="easypiechart" id="easypiechart-orange" data-percent="65" ><span class="percent">65%</span></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>New Users</h4>
-						<div class="easypiechart" id="easypiechart-teal" data-percent="56" ><span class="percent">56%</span></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Visitors</h4>
-						<div class="easypiechart" id="easypiechart-red" data-percent="27" ><span class="percent">27%</span></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+
+	<section class="memSection">
+		<form method="post" class="memSchBox">
+			<input name="adm_memSch" placeholder="밀림의 회원 검색">
+			<button type="button"></button>
+		</form>
+
+		<ul class="memberAll">
+			<li>
+				<ul class="member">
+					<li>회원 ID</li>
+					<li>회원명</li>
+					<li>이메일</li>
+					<li>전화번호</li>
+				</ul>
+			</li>
+		</ul>
+
 	</section>
 	
 	<script src="./js/js_bs/jquery-1.11.1.min.js"></script>
 	<script src="./js/js_bs/bootstrap.min.js"></script>
 	<script src="./js/js_bs/easypiechart.js"></script>
 	<script src="./js/js_bs/easypiechart-data.js"></script>
+	<script src="./js/admin.js"></script>
 	<script src="./js/header.js"></script>
 		
 </body>

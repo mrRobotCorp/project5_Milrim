@@ -107,8 +107,6 @@ p { orphans: 3; widows: 3}
 h2,
 h3 { page-break-after: avoid}
 
-.navbar { display: none}
-
 .btn>.caret,
 .dropup>.btn>.caret { border-top-color: #000 !important}
 
@@ -1961,10 +1959,7 @@ textarea.input-group-sm>.input-group-btn>.btn { height: auto}
 
 .nav>li { position: relative; display: block}
 
-.nav>li>a { position: relative; display: block; padding: 10px 15px}
-
-.nav>li>a:focus,
-.nav>li>a:hover { text-decoration: none; background-color: #eee}
+.nav>li>a { position: relative; display: block; padding: 15px 35px}
 
 .nav>li.disabled>a { color: #777}
 
