@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:title" content="project5 Milrim">
-	<meta property="og:url" content="https://mrrobotcorp.github.io/project5_Milrim/">
-	<meta property="og:image" content="https://mrrobotcorp.github.io/project5_Milrim//source/thumbnail.png">
-	<meta property="og:description" content="4조 프로젝트 사이트 - Milrim">
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="project5 Milrim">
-	<meta name="twitter:url" content="https://mrrobotcorp.github.io/project5_Milrim/">
-	<meta name="twitter:image" content="https://mrrobotcorp.github.io/project5_Milrim//source/thumbnail.png">
-	<meta name="twitter:description" content="4조 프로젝트 사이트 - Milrim">
-	<meta name="description" content="4조 프로젝트 사이트 - Milrim">
-	<meta name='keywords' content='project, milrim, toy project, community, ott service'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="project5 Milrim">
+    <meta property="og:url" content="https://mrrobotcorp.github.io/project5_Milrim/">
+    <meta property="og:image" content="https://mrrobotcorp.github.io/project5_Milrim//source/thumbnail.png">
+    <meta property="og:description" content="4조 프로젝트 사이트 - Milrim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="project5 Milrim">
+    <meta name="twitter:url" content="https://mrrobotcorp.github.io/project5_Milrim/">
+    <meta name="twitter:image" content="https://mrrobotcorp.github.io/project5_Milrim//source/thumbnail.png">
+    <meta name="twitter:description" content="4조 프로젝트 사이트 - Milrim">
+    <meta name="description" content="4조 프로젝트 사이트 - Milrim">
+    <meta name='keywords' content='project, milrim, toy project, community, ott service'>
 
-	<link rel="icon" href="./source/favicon-32x32.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
-	<title>Milrim | 밀림</title>
+    <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
+    <title>Milrim | 밀림</title>
 	<link href="./css/header.css" rel="stylesheet">
-	<link href="./css/css_bs/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/css_bs/styles.css" rel="stylesheet">
+	<link href="./css/admin.css" rel="stylesheet">
 
 </head>
-
 <body>
 	<header>
         <nav>
@@ -65,21 +62,33 @@
             </div>
         </nav>
     </header>
-	<div class="col-sm-3 col-lg-2 sidebar">
-		<ul class="nav menu">
+	<div class="sidebar">
+		<ul class="nav">
 			<li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
 			<li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
 			<li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
 		</ul>
 	</div>
 
-    
+	<section class="memSection">
+		<form method="post" class="memSchBox">
+			<input name="adm_memSch" placeholder="게시글의 제목을 입력해주세요">
+			<button type="button"></button>
+		</form>
 
+		<ul class="memberAll">
+			<li>
+				<ul class="listHead">
+					<li>제목</li>
+					<li>날짜</li>
+					<li>회원 ID</li>
+                </ul>
+			</li>
+		</ul>
 
-	<script src="./js/js_bs/jquery-1.11.1.min.js"></script>
-	<script src="./js/js_bs/bootstrap.min.js"></script>
+	</section>
+	<script src="./js/admin.js"></script>
 	<script src="./js/header.js"></script>
-    <script src="./js/admin.js"></script>
+		
 </body>
-
 </html>

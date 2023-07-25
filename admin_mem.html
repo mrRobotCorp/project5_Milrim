@@ -20,8 +20,6 @@
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
     <title>Milrim | 밀림</title>
 	<link href="./css/header.css" rel="stylesheet">
-	<link href="./css/css_bs/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/css_bs/styles.css" rel="stylesheet">
 	<link href="./css/admin.css" rel="stylesheet">
 
 </head>
@@ -64,8 +62,8 @@
             </div>
         </nav>
     </header>
-	<div class="col-sm-3 col-lg-2 sidebar">
-		<ul class="nav menu">
+	<div class="sidebar">
+		<ul class="nav">
 			<li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
 			<li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
 			<li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
@@ -73,28 +71,41 @@
 	</div>
 
 	<section class="memSection">
-		<form method="post" class="memSchBox">
+		<form method="post" class="memSchBox schBox">
 			<input name="adm_memSch" placeholder="밀림의 회원 검색">
 			<button type="button"></button>
 		</form>
 
-		<ul class="memberAll">
-			<li>
-				<ul class="member">
-					<li>회원 ID</li>
-					<li>회원명</li>
-					<li>이메일</li>
-					<li>전화번호</li>
-				</ul>
-			</li>
-		</ul>
+        <form method="post">
+            <button>수정</button>
+            <button>삭제</button>
+            <ul class="listAll memberAll">
+                <li>
+                    <ul class="listHead">
+                        <li>회원 ID</li>
+                        <li>비밀번호</li>
+                        <li>이름</li>
+                        <li>이메일</li>
+                        <li>전화번호</li>
+                        <li>권한</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="">
+                        <input type="checkbox" name="memOne" value="">
+                        <li>회원 ID</li>
+                        <li>비밀번호</li>
+                        <li>이름</li>
+                        <li>이메일</li>
+                        <li>전화번호</li>
+                        <li>권한</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </form>
 
 	</section>
-	
-	<script src="./js/js_bs/jquery-1.11.1.min.js"></script>
-	<script src="./js/js_bs/bootstrap.min.js"></script>
-	<script src="./js/js_bs/easypiechart.js"></script>
-	<script src="./js/js_bs/easypiechart-data.js"></script>
 	<script src="./js/admin.js"></script>
 	<script src="./js/header.js"></script>
 		

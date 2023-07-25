@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll(".menu li");
+const tabs = document.querySelectorAll(".nav li");
 const href = window.location.href;
 
 if(href.includes("mem")) {

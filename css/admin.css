@@ -1,2 +1,30 @@
-.memSection { margin-left: 16.66666667%; }
-.memSchBox { width: 90%; border: 1px solid #ddd; }
+body { background: #f7f7f7;}
+
+.sidebar { display: block; position: fixed; top: 60px; bottom: 0; left: 0; padding: 0; overflow-x: hidden; overflow-y: auto; box-shadow: none; background: #fff; } 
+
+.sidebar ul { margin: 20px 0px; } 
+
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover { background-color: var(--color-sub); } 
+
+.sidebar ul.nav li.active a, 
+.sidebar ul.nav .active > a:hover, 
+.sidebar ul.nav .active > a:focus {  background-color: var(--color-sub); } 
+
+.sidebar ul.nav li a { height: 50px; padding: 10px 80px 10px 40px; font-size: 15px; line-height: 2em; transition: all .2s; } 
+
+.nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: rgba(255, 255, 255, 0.2); background: none; } 
+
+.nav > li > a { display: flex; align-items: center; }
+.nav > li > a img { margin-right: 15px; width: 25px;}
+/* ------------------------------------------------------ */
+
+.memSection { width: calc(100vw * 1200/ 1920); margin: 110px 0 0 400px; }
+
+.schBox { width: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease;}
+.schBox input { width: 90%; background: transparent; font-size: 17px; font-family: pRegular; }
+.schBox button { width: 20px; height: 20px; margin-right: 10px; background: url(../source/searchIco.png) center center; background-size: cover; cursor: pointer; }
+.schBox:focus-within { background: #fff; border: 2px solid var(--color-main); } 
+
+.listAll li ul { height: 60px; display: flex; align-items: center; justify-content: space-around; font-family: pLight; border: 1px solid #ddd;}
+.listAll .listHead { padding-left: 70px; font-family: pBold;}
+.listAll li ul input[type="checkbox"] { width: 20px;}
