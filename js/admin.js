@@ -14,3 +14,18 @@ if(href.includes("mem")) {
     tabs[1].classList.remove("active");
     tabs[2].classList.add("active");
 }
+
+// ----------------------------------
+const allCh = document.querySelector("#allCh");
+
+function selectAll(selectAll)  {
+    const memChBox = document.getElementsByName('memOne');
+    
+    memChBox.forEach((e) => {
+        e.checked = selectAll.checked;
+    })
+}
+
+allCh.onclick = function() {
+    selectAll(this);
+}

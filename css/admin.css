@@ -18,13 +18,31 @@ body { background: #f7f7f7;}
 .nav > li > a img { margin-right: 15px; width: 25px;}
 /* ------------------------------------------------------ */
 
-.memSection { width: calc(100vw * 1200/ 1920); margin: 110px 0 0 400px; }
+.memSection { width: calc(100vw * 1300/ 1920); margin: 110px 0 0 22%; }
 
-.schBox { width: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease;}
+.memListBox { margin-top: 20px;}
+.memListBox #allCh { display: none;  }
+.memListBox #allCh + label { padding: 5px 10px; border: 1px solid #999; border-radius: 7px; font-size: 14px; cursor: pointer; }
+.uptBtn, .delBtn { padding: 5px 10px; border: 1px solid #999; border-radius: 7px; font-size: 14px; font-family: pMedium; background: transparent;}
+
+.schBox { width: 95%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease;}
 .schBox input { width: 90%; background: transparent; font-size: 17px; font-family: pRegular; }
 .schBox button { width: 20px; height: 20px; margin-right: 10px; background: url(../source/searchIco.png) center center; background-size: cover; cursor: pointer; }
 .schBox:focus-within { background: #fff; border: 2px solid var(--color-main); } 
 
-.listAll li ul { height: 60px; display: flex; align-items: center; justify-content: space-around; font-family: pLight; border: 1px solid #ddd;}
-.listAll .listHead { padding-left: 70px; font-family: pBold;}
-.listAll li ul input[type="checkbox"] { width: 20px;}
+.listAll { margin: 20px 0 100px 0;}
+.listAll li ul { display: flex; align-items: center; justify-content: space-around; }
+.listAll .listHead { height: 50px; padding-left: 80px; background: url(../source/bgAdm.png) center center; background-size: cover; color: #fff; border-radius: 20px; font-family: pBold;}
+.listAll .listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px;}
+
+.liWid li { width: 80px; text-align: center; }
+.liWid li:nth-child(4),
+.liWid li:nth-child(5) { width: 170px;}
+
+.listRow { position: relative; height: 60px; border-bottom: 1px solid #ddd; font-family: pLight;}
+.listRow input[type="checkbox"] { display: none; }
+.listRow input[type="checkbox"] + label { position: absolute; width: 22px; height: 22px; top: 18px; left: 40px; background: url(../source/checkIco.png) center center; background-size: cover; transition: all .2s; cursor: pointer; opacity: .5; }
+.listRow input[type="checkbox"] + label:hover { opacity: 1;}
+.listRow input[type="checkbox"]:checked + label { background: url(../source/checkedIco.png) center center; background-size: cover; opacity: 1; }
+
+.listRow .memberInfo { padding-left: 80px; width: 100%; display: flex; align-items: center; justify-content: space-around;}
