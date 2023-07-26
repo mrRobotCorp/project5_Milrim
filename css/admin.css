@@ -62,3 +62,43 @@ body { background: #f7f7f7; }
 .pagination li.active a { color: #fff; } 
 
 .pagination li.pages ul li { display: inline-block; float: none; } 
+
+/* ------------------- modal ---------------------- */
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    -webkit-transition: .3s ease-out;
+    transition: .3s ease-out;
+}
+
+.modal {
+display: none;
+position: fixed;
+left: 0;
+right: 0;
+background-color: #fafafa;
+padding: 0;
+max-height: 70%;
+width: 500px;
+margin: auto;
+overflow-y: auto;
+border-radius: 2px;
+will-change: top, opacity;
+}
+.modal .modal-content {
+padding: 24px;
+}
+
+.modal .modal-close {
+cursor: pointer;
+}
+
+.modal .uptRow { display: flex; align-items: center; margin-bottom: 20px; } 
+.modal .uptRow .uptSub { width: 80px; }
+.modal .uptRow input { padding: 10px 15px; width: 200px; font-family: pRegular; }

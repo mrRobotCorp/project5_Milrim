@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="project5 Milrim">
@@ -20,14 +21,15 @@
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
     <title>Milrim | 밀림</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
     <link href="./css/header.css" rel="stylesheet">
-	<link href="./css/admin.css" rel="stylesheet">
+    <link href="./css/admin.css" rel="stylesheet">
 
 </head>
+
 <body>
-	<header>
+    <header>
         <nav>
             <ul class="gnb">
                 <li>
@@ -65,26 +67,26 @@
             </div>
         </nav>
     </header>
-	<div class="sidebar">
-		<ul class="nav">
-			<li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
-			<li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
-			<li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
-		</ul>
-	</div>
+    <div class="sidebar">
+        <ul class="nav">
+            <li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
+            <li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
+            <li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
+        </ul>
+    </div>
 
-	<section class="memSection" id="users">
-		<form method="post" class="memSchBox schBox search">
-			<button type="button"></button>
-			<input name="adm_memSch" placeholder="밀림의 회원 검색">
-		</form>
+    <section class="memSection" id="users">
+        <form method="post" class="memSchBox schBox search">
+            <button type="button"></button>
+            <input name="adm_memSch" placeholder="밀림의 회원 검색">
+        </form>
 
         <form method="post" class="memListBox" id="test-list">
             <span>
                 <input type="checkbox" name="memOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button class="uptBtn">수정</button>
+            <button  data-target="modal1" class="modal-trigger uptBtn">수정</button>
             <button class="delBtn">삭제</button>
 
             <ul class="listHead liWid">
@@ -103,7 +105,7 @@
                             <input type="checkbox" name="memOne" id="mem0" value="">
                             <label for="mem0"></label>
                         </span>
-                        <div  class="memberInfo">
+                        <div class="memberInfo">
                             <li class="memId">skrr</li>
                             <li class="memPw">passwooo</li>
                             <li class="name">Emma</li>
@@ -113,15 +115,50 @@
                         </div>
                     </ul>
                 </li>
-                
+
             </ul>
             <ul class="pagination"></ul>
         </form>
 
+        
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <form method="post" class="uptFrm">
+                    <div class="uptRow">
+                        <span class="uptSub">회원 ID</span>
+                        <input type="text" name="uptName" placeholder="memId">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">비밀번호</span>
+                        <input type="text" name="uptName" placeholder="memPw">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">이름</span>
+                        <input type="text" name="uptName" placeholder="name">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">이메일</span>
+                        <input type="text" name="uptName" placeholder="emailAdr">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">전화번호</span>
+                        <input type="text" name="uptName" placeholder="pNumber">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">권한</span>
+                        <input type="text" name="uptName" placeholder="author">
+                    </div>
+                </form>
+            </div>
+            <button class="modal-close">Agree</button>
+        </div>
 
-	</section>
-	<script src="./js/header.js"></script>
-	<script src="./js/admin.js"></script>
-		
+    </section>
+    <script src="./js/header.js"></script>
+    <script src="./js/materialize.js"></script>
+    <script src="./js/admin.js"></script>
+
+
 </body>
+
 </html>

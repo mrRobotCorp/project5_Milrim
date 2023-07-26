@@ -21,7 +21,7 @@ const allCh = document.querySelector("#allCh");
 
 function selectAll(selectAll) {
     const memChBox = document.getElementsByName('memOne');
-    
+
     memChBox.forEach((e) => {
         e.checked = selectAll.checked;
     })
@@ -33,23 +33,38 @@ allCh.onclick = function () {
 
 // ------------------ 페이지네이션, keyup 검색 ------------------------------
 var options = {
-    valueNames: ['memCheck', 'memId', 'memPw', 'name', 'emailAdr', 'pNumber', 'author' ],
+    valueNames: ['memCheck', 'memId', 'memPw', 'name', 'emailAdr', 'pNumber', 'author'],
     page: 9,
     pagination: true
 };
 
 var userList = new List('users', options);
 
-for(let i=1; i<=20; i++) {
+for (let i = 1; i <= 20; i++) {
 
     userList.add({
-        memCheck : `<input type="checkbox" name="memOne" id="mem` + i +`" value="">
+        memCheck: `<input type="checkbox" name="memOne" id="mem` + i + `" value="">
         <label for="mem` + i + `"></label>`,
         memId: "thisisid" + i,
-        memPw : "pww100" + i,
+        memPw: "pww100" + i,
         name: "회원" + i,
-        emailAdr : "exp" + i + "@naver.com",
-        pNumber : "010-11" + i +"-2222",
-        author : "member"
+        emailAdr: "exp" + i + "@naver.com",
+        pNumber: "010-11" + i + "-2222",
+        author: "member"
     });
 }
+
+
+// ----------------------- modal ---------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelector('.modal');
+    var instances = M.Modal.init(elems, options);
+    
+    var listRow = document.querySelectorAll(".listRow");
+    listRow.forEach((e) => {
+        e.ondblclick = function() {
+            console.log("click");
+        }
+    })
+
+});
