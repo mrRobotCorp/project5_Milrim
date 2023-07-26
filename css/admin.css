@@ -1,48 +1,64 @@
-body { background: #f7f7f7;}
+body { background: #f7f7f7; } 
 
-.sidebar { display: block; position: fixed; top: 60px; bottom: 0; left: 0; padding: 0; overflow-x: hidden; overflow-y: auto; box-shadow: none; background: #fff; } 
-
-.sidebar ul { margin: 20px 0px; } 
-
-.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover { background-color: var(--color-sub); } 
+.sidebar { display: block; position: fixed; top: 60px; bottom: 0; left: 0; padding: 0; overflow-x: hidden; overflow-y: auto; box-shadow: none; background: #fff; z-index: 50; } 
 
 .sidebar ul.nav li.active a, 
 .sidebar ul.nav .active > a:hover, 
-.sidebar ul.nav .active > a:focus {  background-color: var(--color-sub); } 
+.sidebar ul.nav .active > a:focus { background-color: var(--color-sub); } 
 
-.sidebar ul.nav li a { height: 50px; padding: 10px 80px 10px 40px; font-size: 15px; line-height: 2em; transition: all .2s; } 
+.sidebar ul.nav { margin-top: 50px; } 
+.sidebar ul.nav li { display: flex; align-items: center; justify-content: center; height: 50px; width: 230px; } 
+.sidebar ul.nav li a { display: flex; justify-content: flex-start; align-items: center; width: 120px; height: 20px; padding: 10px 30px; font-size: 15px; border-radius: 20px; transition: all .2s; } 
+.sidebar ul.nav a:hover { background-color: #eee; } 
 
 .nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: rgba(255, 255, 255, 0.2); background: none; } 
 
-.nav > li > a { display: flex; align-items: center; }
-.nav > li > a img { margin-right: 15px; width: 25px;}
+.nav > li > a img { margin-right: 15px; width: 22px; } 
 /* ------------------------------------------------------ */
 
-.memSection { width: calc(100vw * 1300/ 1920); margin: 110px 0 0 22%; }
+.memSection { width: calc(100vw * 1300/ 1920); margin: 110px 0 0 22%; } 
 
-.memListBox { margin-top: 20px;}
-.memListBox #allCh { display: none;  }
-.memListBox #allCh + label { padding: 5px 10px; border: 1px solid #999; border-radius: 7px; font-size: 14px; cursor: pointer; }
-.uptBtn, .delBtn { padding: 5px 10px; border: 1px solid #999; border-radius: 7px; font-size: 14px; font-family: pMedium; background: transparent;}
+.memListBox { margin-top: 20px; } 
+.memListBox #allCh { display: none; } 
+.memListBox #allCh + label { padding: 6px 12px; margin: 0 10px; border-radius: 7px; font-size: 14px; background-color: #bde0ff; cursor: pointer; transition: all .2s; } 
+.memListBox #allCh + label:hover { background-color: #92cafc; } 
 
-.schBox { width: 95%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease;}
-.schBox input { width: 90%; background: transparent; font-size: 17px; font-family: pRegular; }
-.schBox button { width: 20px; height: 20px; margin-right: 10px; background: url(../source/searchIco.png) center center; background-size: cover; cursor: pointer; }
+.uptBtn, .delBtn { padding: 6px 12px; border-radius: 7px; font-size: 14px; font-family: pMedium; background: transparent; transition: all .2s; cursor: pointer; } 
+.uptBtn { margin-right: 10px; background-color: #ffe395; } 
+.uptBtn:hover { background-color: #ffd562; } 
+.delBtn { background-color: #ffc2b8; } 
+.delBtn:hover { background-color: #ff9f91; } 
+
+.schBox { width: 95%; padding: 0 20px; display: flex; align-items: center; justify-content: flex-start; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease; } 
+.schBox button { width: 20px; height: 20px; margin: 0 25px 0 12px; background: url(../source/searchIco.png) center center; background-size: cover; cursor: pointer; } 
+.schBox input { width: 90%; background: transparent; font-size: 17px; font-family: pRegular; } 
 .schBox:focus-within { background: #fff; border: 2px solid var(--color-main); } 
 
-.listAll { margin: 20px 0 100px 0;}
-.listAll li ul { display: flex; align-items: center; justify-content: space-around; }
-.listAll .listHead { height: 50px; padding-left: 80px; background: url(../source/bgAdm.png) center center; background-size: cover; color: #fff; border-radius: 20px; font-family: pBold;}
-.listAll .listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px;}
+.listAll { width: 100%; margin-right: 100px; } 
+.listAll li ul { display: flex; align-items: center; justify-content: space-around; } 
 
-.liWid li { width: 80px; text-align: center; }
+.listHead { display: flex; align-items: center; justify-content: space-around; margin-top: 20px; height: 50px; padding-left: 80px; background: url(../source/bgAdm.png) center center; background-size: cover; color: #fff; border-radius: 20px; font-family: pBold; } 
+.listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px; } 
+
+.liWid li { width: 80px; text-align: center; } 
 .liWid li:nth-child(4),
-.liWid li:nth-child(5) { width: 170px;}
+.liWid li:nth-child(5) { width: 170px; } 
 
-.listRow { position: relative; height: 60px; border-bottom: 1px solid #ddd; font-family: pLight;}
-.listRow input[type="checkbox"] { display: none; }
-.listRow input[type="checkbox"] + label { position: absolute; width: 22px; height: 22px; top: 18px; left: 40px; background: url(../source/checkIco.png) center center; background-size: cover; transition: all .2s; cursor: pointer; opacity: .5; }
-.listRow input[type="checkbox"] + label:hover { opacity: 1;}
-.listRow input[type="checkbox"]:checked + label { background: url(../source/checkedIco.png) center center; background-size: cover; opacity: 1; }
+.listRow { position: relative; width: 100%; height: 60px; border-bottom: 1px solid #ddd; font-family: pLight; } 
+.listRow input[type="checkbox"] { display: none; } 
+.listRow input[type="checkbox"] + label { position: absolute; width: 22px; height: 22px; top: 18px; left: 40px; background: url(../source/checkIco.png) center center; background-size: cover; transition: all .2s; cursor: pointer; opacity: .5; } 
+.listRow input[type="checkbox"] + label:hover { opacity: 1; } 
+.listRow input[type="checkbox"]:checked + label { background: url(../source/checkedIco.png) center center; background-size: cover; opacity: 1; } 
 
-.listRow .memberInfo { padding-left: 80px; width: 100%; display: flex; align-items: center; justify-content: space-around;}
+.listRow .memberInfo { padding-left: 80px; width: 100%; display: flex; align-items: center; justify-content: space-around; } 
+
+/* ------------------------------------------- */
+.pagination { margin-top: 20px; display: flex; align-items: center; justify-content: center;}
+.pagination li { display: inline-block; margin: 0 3px; border-radius: 3px; text-align: center; vertical-align: top; height: 25px; transition: all .2s;} 
+.pagination li:hover { background-color: #ddd;}
+
+.pagination li a { display: inline-block; font-size: 15px; padding: 0 8px; line-height: 25px; } 
+.pagination li.active { background-color: var(--color-main); } 
+.pagination li.active a { color: #fff; } 
+
+.pagination li.pages ul li { display: inline-block; float: none; } 

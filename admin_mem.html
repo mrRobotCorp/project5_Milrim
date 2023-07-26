@@ -19,7 +19,10 @@
     <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
     <title>Milrim | 밀림</title>
-	<link href="./css/header.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <link href="./css/header.css" rel="stylesheet">
 	<link href="./css/admin.css" rel="stylesheet">
 
 </head>
@@ -70,165 +73,55 @@
 		</ul>
 	</div>
 
-	<section class="memSection">
-		<form method="post" class="memSchBox schBox">
-			<input name="adm_memSch" placeholder="밀림의 회원 검색">
+	<section class="memSection" id="users">
+		<form method="post" class="memSchBox schBox search">
 			<button type="button"></button>
+			<input name="adm_memSch" placeholder="밀림의 회원 검색">
 		</form>
 
-        <form method="post" class="memListBox">
+        <form method="post" class="memListBox" id="test-list">
             <span>
                 <input type="checkbox" name="memOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
             <button class="uptBtn">수정</button>
             <button class="delBtn">삭제</button>
-            <ul class="listAll">
-                <li>
-                    <ul class="listHead liWid">
-                        <li>회원 ID</li>
-                        <li>비밀번호</li>
-                        <li>이름</li>
-                        <li>이메일</li>
-                        <li>전화번호</li>
-                        <li>권한</li>
-                    </ul>
-                </li>
 
-                <li>
+            <ul class="listHead liWid">
+                <li>회원 ID</li>
+                <li>비밀번호</li>
+                <li>이름</li>
+                <li>이메일</li>
+                <li>전화번호</li>
+                <li>권한</li>
+            </ul>
+
+            <ul class="listAll list">
+                <li class="oneRow">
                     <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem1" value="">
-                        <label for="mem1"></label>
+                        <span class="memCheck">
+                            <input type="checkbox" name="memOne" id="mem0" value="">
+                            <label for="mem0"></label>
+                        </span>
                         <div  class="memberInfo">
-                            <li>skrr</li>
-                            <li>passwooo</li>
-                            <li>Emma</li>
-                            <li>shw11111@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem2" value="">
-                        <label for="mem2"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Kevin</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem3" value="">
-                        <label for="mem3"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Tom</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem4" value="">
-                        <label for="mem4"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Elliot</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem5" value="">
-                        <label for="mem5"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Taylor</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem2" value="">
-                        <label for="mem2"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Karen</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem2" value="">
-                        <label for="mem2"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Daniel</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem2" value="">
-                        <label for="mem2"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Sam</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
-                        </div>
-                    </ul>
-                </li>
-                <li>
-                    <ul class="listRow liWid">
-                        <input type="checkbox" name="memOne" id="mem2" value="">
-                        <label for="mem2"></label>
-                        <div  class="memberInfo">
-                            <li>ididid</li>
-                            <li>whatispw</li>
-                            <li>Chris</li>
-                            <li>skrrrrt000@naver.com</li>
-                            <li>010-5050-2020</li>
-                            <li>member</li>
+                            <li class="memId">skrr</li>
+                            <li class="memPw">passwooo</li>
+                            <li class="name">Emma</li>
+                            <li class="emailAdr">damnnn11111@naver.com</li>
+                            <li class="pNumber">010-5050-2020</li>
+                            <li class="author">member</li>
                         </div>
                     </ul>
                 </li>
                 
             </ul>
-
+            <ul class="pagination"></ul>
         </form>
 
+
 	</section>
-	<script src="./js/admin.js"></script>
 	<script src="./js/header.js"></script>
+	<script src="./js/admin.js"></script>
 		
 </body>
 </html>
