@@ -86,8 +86,8 @@
                 <input type="checkbox" name="memOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button  data-target="modal1" class="modal-trigger uptBtn">수정</button>
-            <button class="delBtn">삭제</button>
+            <button data-target="modal1" class="modal-trigger uptBtn">수정</button>
+            <button type="button" class="delBtn">삭제</button>
 
             <ul class="listHead liWid">
                 <li>회원 ID</li>
@@ -120,9 +120,10 @@
             <ul class="pagination"></ul>
         </form>
 
-        
+        <!-- -------- 모달창 ------------ -->
         <div id="modal1" class="modal">
             <div class="modal-content">
+                <h4>회원 정보 수정</h4>
                 <form method="post" class="uptFrm">
                     <div class="uptRow">
                         <span class="uptSub">회원 ID</span>
@@ -150,7 +151,7 @@
                     </div>
                 </form>
             </div>
-            <button class="modal-close">Agree</button>
+            <button class="modal-close">수정</button>
         </div>
 
     </section>

@@ -18,9 +18,9 @@ if (href.includes("mem")) {
 
 // --------------- 전체 선택 ----------------------
 const allCh = document.querySelector("#allCh");
+const memChBox = document.getElementsByName('memOne');
 
 function selectAll(selectAll) {
-    const memChBox = document.getElementsByName('memOne');
 
     memChBox.forEach((e) => {
         e.checked = selectAll.checked;
@@ -31,7 +31,26 @@ allCh.onclick = function () {
     selectAll(this);
 }
 
-// ------------------ 페이지네이션, keyup 검색 ------------------------------
+// ---- 체크된 항목 true 값으로 반환해서 배열에 넣기 -----
+const chArry = [];
+const isCheck = false;
+const delBtn = document.querySelector(".delBtn");
+
+delBtn.onclick = function() {
+    checkList();
+}
+
+function checkList() {
+    memChBox.forEach((e, i) => {
+        if(e.checked == true) {
+            console.log(i + "번 check");
+        }
+    })
+}
+
+
+
+// ------------------ 멤버 조회 - 페이지네이션, keyup 검색 ------------------------------
 var options = {
     valueNames: ['memCheck', 'memId', 'memPw', 'name', 'emailAdr', 'pNumber', 'author'],
     page: 9,
@@ -63,8 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var listRow = document.querySelectorAll(".listRow");
     listRow.forEach((e) => {
         e.ondblclick = function() {
-            console.log("click");
+            instances.open();
         }
-    })
+    });
+
+    // ---- modal 영역 밖 클릭 시 닫기
+    document.addEventListener('mouseup', function(e) {
+        if(!elems.contains(e.target)) {
+            instances.close();
+        }
+    });
 
 });
