@@ -60,7 +60,6 @@ var options = {
 var userList = new List('users', options);
 
 for (let i = 1; i <= 20; i++) {
-
     userList.add({
         memCheck: `<input type="checkbox" name="memOne" id="mem` + i + `" value="">
         <label for="mem` + i + `"></label>`,
@@ -76,6 +75,7 @@ for (let i = 1; i <= 20; i++) {
 
 // ----------------------- modal ---------------------------------
 document.addEventListener('DOMContentLoaded', function () {
+    
     var elems = document.querySelector('.modal');
     var instances = M.Modal.init(elems, options);
     

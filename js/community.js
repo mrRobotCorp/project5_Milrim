@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
 
     // --------------- post more -------------------
+
     load('.postSection', '3');
 
     $(".morePost").on("click", function () {
         load('.postSection', '3', $(".morePost"));
     })
-    
     function load(id, cnt, btn) {
         let plist = id + " .postAll:not(.active)";
         let plength = $(plist).length;
