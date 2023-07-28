@@ -112,10 +112,42 @@
                             <li class="vidId">VID-0538</li>
                             <li class="upload">2023-05-05</li>
                         </div>
+                        <button type="button" class="epShowBtn">
+                            <img src="./source/arrow_d.png">
+                        </button>
                     </ul>
-                    <ul class="epList">
-                        <li></li>
-                    </ul>
+                    <div class="epListAll">
+                        <ul class="epList">
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>1회차의 제목 제목 1회차의 제목 제목 1회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>2회차</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <img class="addBtn" src="./source/addIco.png">
+                            </li>
+                        </ul>
+
+                    </div>
                 </li>
 
             </ul>
@@ -124,7 +156,9 @@
 
         <!-- -------- 모달창 ------------ -->
         <div id="modal1" class="modal">
-            <div class="modal-content">
+            <div class="modalCon">
+                <button type="button" class="modal-close"></button>
+                
                 <h4>영상 정보 수정</h4>
                 <form method="post" class="uptFrm">
                     <div class="uptRow">
@@ -141,7 +175,7 @@
                     </div>
                 </form>
             </div>
-            <button type="button" class="modal-close">수정</button>
+            <button type="button" class="modalUpt">수정</button>
         </div>
 
     </section>
@@ -171,6 +205,18 @@
                 upload: "2023-07-0" + i
             });
         }
+
+        // -------------------- 회차 정보 --------------------
+        const epBtn = document.querySelectorAll(".epShowBtn");
+        const epList = document.querySelectorAll(".epListAll");
+
+        epBtn.forEach((e,i) => {
+            e.onclick = function() {
+                epList[i].classList.toggle("active");
+                epBtn[i].classList.toggle("active");
+            }
+        })
+        
 
     </script>
 

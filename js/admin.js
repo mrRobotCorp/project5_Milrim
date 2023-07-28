@@ -74,8 +74,12 @@ function checkList() {
 
 // ----------------------- modal ---------------------------------
 document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector("body").insertAdjacentHTML("afterbegin", `
+        <div class="darkBg"></div>`);
+
     const bg = document.querySelector(".darkBg");
     const uptBtn = document.querySelector(".uptBtn");
+    const closeBtn = document.querySelector(".modal-close");
     var elems = document.querySelector('.modal');
     var instances = M.Modal.init(elems, options);
     
@@ -86,6 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         bg.classList.add("active");
     }
     
+    closeBtn.onclick = function() {
+        bg.classList.remove("active");
+    }
+
     listRow.forEach((e) => {
         e.ondblclick = function() {
             instances.open();
@@ -102,6 +110,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
-
-document.querySelector("body").insertAdjacentHTML("afterbegin", `
-    <div class="darkBg"></div>`);
