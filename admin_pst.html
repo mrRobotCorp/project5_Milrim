@@ -74,10 +74,10 @@
         </ul>
     </div>
 
-    <section class="pstSection" id="users">
+    <section class="pstSection" id="posts">
         <form method="post" class="memSchBox schBox search">
             <button type="button"></button>
-            <input name="adm_memSch" placeholder="게시글 제목을 검색">
+            <input name="adm_pstSch" placeholder="게시글 제목을 검색">
         </form>
 
         <form method="post" class="listBox" id="test-list">
@@ -85,26 +85,26 @@
                 <input type="checkbox" name="pstOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button  data-target="modal1" class="modal-trigger uptBtn">수정</button>
-            <button class="delBtn">삭제</button>
+            <button type="button" class="uptBtn">수정</button>
+            <button type="button" class="delBtn">삭제</button>
 
             <ul class="listHead pst">
-                <li>제목</li>
-                <li>날짜</li>
+                <li>글 제목</li>
+                <li>작성일</li>
                 <li>회원 ID</li>
             </ul>
 
             <ul class="listAll list">
-                <li class="oneRow">
+                <li>
                     <ul class="listRow">
-                        <span>
-                            <input type="checkbox" name="pstOne" id="mem0" value="">
-                            <label for="mem0"></label>
+                        <span class="pstCheck">
+                            <input type="checkbox" name="pstOne" id="pst0" value="pst0">
+                            <label for="pst0"></label>
                         </span>
                         <div class="pstInfo">
-                            <li>데스노트 리마스터링 본 사람..</li>
-                            <li>2023-07-01</li>
-                            <li>Emma</li>
+                            <li class="pstTitle">데스노트 리마스터링 본 사람..</li>
+                            <li class="pstDate">2023-07-01</li>
+                            <li class="pstMem">Emma</li>
                         </div>
                     </ul>
                 </li>
@@ -116,30 +116,50 @@
         <!-- -------- 모달창 ------------ -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>회원 정보 수정</h4>
+                <h4>게시물 정보 수정</h4>
                 <form method="post" class="uptFrm">
                     <div class="uptRow">
+                        <span class="uptSub">글 제목</span>
+                        <input type="text" name="uptTitle" placeholder="게시글의 제목 입력">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">작성일</span>
+                        <input type="text" name="uptDate" placeholder="작성일 입력">
+                    </div>
+                    <div class="uptRow">
                         <span class="uptSub">회원 ID</span>
-                        <input type="text" name="uptName" placeholder="memId">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">비밀번호</span>
-                        <input type="text" name="uptName" placeholder="memPw">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">이름</span>
-                        <input type="text" name="uptName" placeholder="name">
+                        <input type="text" name="uptMem" placeholder="회원의 ID 입력">
                     </div>
                 </form>
             </div>
-            <button class="modal-close">수정</button>
+            <button type="button" class="modal-close">수정</button>
         </div>
 
     </section>
     <script src="./js/header.js"></script>
     <script src="./js/materialize.js"></script>
     <script src="./js/admin.js"></script>
+    <script>
+        var options = {
+            valueNames: ['pstCheck', 'pstTitle', 'pstDate', 'pstMem'],
+            page: 9,
+            pagination: true
+        };
 
+        var pstList = new List('posts', options);  
+
+
+        // --- 임시 데이터 생성 -----
+        for (let i = 1; i < 20; i++) {
+            pstList.add({
+                pstCheck: `<input type="checkbox" name="pstOne" id="pst` + i + `" value="pst`+ i +`">
+                <label for="pst` + i + `"></label>`,
+                pstTitle: "게시글의 제목을 넣~는~곳" + i,
+                pstDate: "2023-05-0" + i,
+                pstMem: "회원" + i
+            });
+        }
+    </script>
 
 </body>
 

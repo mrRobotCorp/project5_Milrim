@@ -74,10 +74,10 @@
         </ul>
     </div>
 
-    <section class="vidSection" id="users">
+    <section class="vidSection" id="videos">
         <form method="post" class="memSchBox schBox search">
             <button type="button"></button>
-            <input name="adm_memSch" placeholder="작품의 제목을 검색">
+            <input name="adm_vidSch" placeholder="작품의 제목을 검색">
         </form>
 
         <form method="post" class="listBox" id="test-list">
@@ -85,21 +85,21 @@
                 <input type="checkbox" name="vidOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button data-target="modal1" class="modal-trigger uptBtn">수정</button>
+            <button type="button" class="uptBtn">수정</button>
             <button type="button" class="delBtn">삭제</button>
 
             <ul class="listHead vid">
-                <li>영상 제목-썸네일 제목</li>
+                <li>영상 제목</li>
                 <li>영상 ID</li>
                 <li>업로드일</li>
             </ul>
 
             <ul class="listAll list">
-                <li class="oneRow">
+                <li>
                     <ul class="listRow">
-                        <span>
-                            <input type="checkbox" name="vidOne" id="mem0" value="">
-                            <label for="mem0"></label>
+                        <span class="vidCheck">
+                            <input type="checkbox" name="vidOne" id="vid0" value="video0">
+                            <label for="vid0"></label>
                         </span>
                         <div class="vidInfo">
                             <li class="vidTitle">
@@ -109,9 +109,12 @@
                                     <p>총 39회</p>
                                 </div>
                             </li>
-                            <li class="vidId">VID-059489</li>
+                            <li class="vidId">VID-0538</li>
                             <li class="upload">2023-05-05</li>
                         </div>
+                    </ul>
+                    <ul class="epList">
+                        <li></li>
                     </ul>
                 </li>
 
@@ -122,34 +125,54 @@
         <!-- -------- 모달창 ------------ -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>회원 정보 수정</h4>
+                <h4>영상 정보 수정</h4>
                 <form method="post" class="uptFrm">
                     <div class="uptRow">
-                        <span class="uptSub">회원 ID</span>
-                        <input type="text" name="uptName" placeholder="memId">
+                        <span class="uptSub">영상 제목</span>
+                        <input type="text" name="uptName" placeholder="영상의 제목 입력">
                     </div>
                     <div class="uptRow">
-                        <span class="uptSub">비밀번호</span>
-                        <input type="text" name="uptName" placeholder="memPw">
+                        <span class="uptSub">영상 ID</span>
+                        <input type="text" name="uptName" placeholder="영상 ID 입력">
                     </div>
                     <div class="uptRow">
-                        <span class="uptSub">이름</span>
-                        <input type="text" name="uptName" placeholder="name">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">이메일</span>
-                        <input type="text" name="uptName" placeholder="emailAdr">
+                        <span class="uptSub">업로드일</span>
+                        <input type="text" name="uptName" placeholder="업로드일 입력">
                     </div>
                 </form>
             </div>
-            <button class="modal-close">수정</button>
+            <button type="button" class="modal-close">수정</button>
         </div>
 
     </section>
     <script src="./js/header.js"></script>
     <script src="./js/materialize.js"></script>
     <script src="./js/admin.js"></script>
+    <script>
+        var options = {
+            valueNames: ['vidCheck', 'vidTitle', 'vidId', 'upload'],
+            page: 5,
+            pagination: true
+        };
 
+        var vidList = new List('videos', options);
+
+        // --- 임시 데이터 생성 -----
+        for (let i = 1; i < 10; i++) {
+            vidList.add({
+                vidCheck: `<input type="checkbox" name="vidOne" id="vid` + i + `" value="video`+i+`">
+                <label for="vid` + i + `"></label>`,
+                vidTitle: `<img src="./source/thumb03.jpg"> 
+                            <div>
+                                <p>데스노트 리마스터링</p>
+                                <p>총 39회</p>
+                            </div>`,
+                vidId: "VID-100" + i,
+                upload: "2023-07-0" + i
+            });
+        }
+
+    </script>
 
 </body>
 

@@ -85,10 +85,10 @@
                 <input type="checkbox" name="memOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button data-target="modal1" class="modal-trigger uptBtn">수정</button>
+            <button type="button" class="uptBtn">수정</button>
             <button type="button" class="delBtn">삭제</button>
 
-            <ul class="listHead">
+            <ul class="listHead mem">
                 <li>회원 ID</li>
                 <li>비밀번호</li>
                 <li>이름</li>
@@ -98,10 +98,10 @@
             </ul>
 
             <ul class="listAll list">
-                <li class="oneRow">
+                <li>
                     <ul class="listRow">
                         <span class="memCheck">
-                            <input type="checkbox" name="memOne" id="mem0" value="">
+                            <input type="checkbox" name="memOne" id="mem0" value="user0">
                             <label for="mem0"></label>
                         </span>
                         <div class="memberInfo">
@@ -126,11 +126,11 @@
                 <form method="post" class="uptFrm">
                     <div class="uptRow">
                         <span class="uptSub">회원 ID</span>
-                        <input type="text" name="uptName" placeholder="memId">
+                        <input type="text" name="uptId" placeholder="memId">
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">비밀번호</span>
-                        <input type="text" name="uptName" placeholder="memPw">
+                        <input type="text" name="uptPw" placeholder="memPw">
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">이름</span>
@@ -138,26 +138,49 @@
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">이메일</span>
-                        <input type="text" name="uptName" placeholder="emailAdr">
+                        <input type="text" name="uptEmail" placeholder="emailAdr">
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">전화번호</span>
-                        <input type="text" name="uptName" placeholder="pNumber">
+                        <input type="text" name="uptNumber" placeholder="pNumber">
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">권한</span>
-                        <input type="text" name="uptName" placeholder="author">
+                        <input type="text" name="uptAuth" placeholder="author">
                     </div>
                 </form>
             </div>
-            <button class="modal-close">수정</button>
+            <button type="button" class="modal-close">수정</button>
         </div>
 
     </section>
     <script src="./js/header.js"></script>
     <script src="./js/materialize.js"></script>
     <script src="./js/admin.js"></script>
+    <script>
+        var options = {
+            valueNames: ['memCheck', 'memId', 'memPw', 'name', 'emailAdr', 'pNumber', 'author'],
+            page: 9,
+            pagination: true
+        };
 
+        var userList = new List('users', options);  
+
+
+        // --- 임시 데이터 생성 -----
+        for (let i = 1; i <= 20; i++) {
+            userList.add({
+                memCheck: `<input type="checkbox" name="memOne" id="mem` + i + `" value="user`+ i +`">
+                <label for="mem` + i + `"></label>`,
+                memId: "thisisid" + i,
+                memPw: "pww100" + i,
+                name: "회원" + i,
+                emailAdr: "exp" + i + "@naver.com",
+                pNumber: "010-11" + i + "-2222",
+                author: "member"
+            });
+        }
+    </script>
 
 </body>
 
