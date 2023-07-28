@@ -35,7 +35,6 @@
                 <li>
                     <a href="#"><img class="headLogo" src="./source/logo_noBg_b.png"></a>
                 </li>
-                <li><a href="#">밀림의 숲</a></li>
             </ul>
             <div class="mypageAll">
                 <div class="myProfile">
@@ -75,21 +74,21 @@
         </ul>
     </div>
 
-    <section class="memSection" id="users">
+    <section class="pstSection" id="users">
         <form method="post" class="memSchBox schBox search">
             <button type="button"></button>
-            <input name="adm_memSch" placeholder="밀림의 회원 검색">
+            <input name="adm_memSch" placeholder="게시글 제목을 검색">
         </form>
 
-        <form method="post" class="memListBox" id="test-list">
+        <form method="post" class="listBox" id="test-list">
             <span>
-                <input type="checkbox" name="memOne" id="allCh">
+                <input type="checkbox" name="pstOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
             <button  data-target="modal1" class="modal-trigger uptBtn">수정</button>
             <button class="delBtn">삭제</button>
 
-            <ul class="listHead liWid">
+            <ul class="listHead pst">
                 <li>제목</li>
                 <li>날짜</li>
                 <li>회원 ID</li>
@@ -97,9 +96,9 @@
 
             <ul class="listAll list">
                 <li class="oneRow">
-                    <ul class="listRow liWid">
-                        <span class="memCheck">
-                            <input type="checkbox" name="memOne" id="mem0" value="">
+                    <ul class="listRow">
+                        <span>
+                            <input type="checkbox" name="pstOne" id="mem0" value="">
                             <label for="mem0"></label>
                         </span>
                         <div class="pstInfo">
@@ -130,18 +129,6 @@
                     <div class="uptRow">
                         <span class="uptSub">이름</span>
                         <input type="text" name="uptName" placeholder="name">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">이메일</span>
-                        <input type="text" name="uptName" placeholder="emailAdr">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">전화번호</span>
-                        <input type="text" name="uptName" placeholder="pNumber">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">권한</span>
-                        <input type="text" name="uptName" placeholder="author">
                     </div>
                 </form>
             </div>

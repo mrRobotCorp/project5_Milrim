@@ -19,12 +19,20 @@ if (href.includes("mem")) {
 // --------------- 전체 선택 ----------------------
 const allCh = document.querySelector("#allCh");
 const memChBox = document.getElementsByName('memOne');
+const pstChBox = document.getElementsByName('pstOne');
+const vidChBox = document.getElementsByName('vidOne');
 
 function selectAll(selectAll) {
-
     memChBox.forEach((e) => {
         e.checked = selectAll.checked;
-    })
+    });
+    pstChBox.forEach((e) => {
+        e.checked = selectAll.checked;
+    });
+    vidChBox.forEach((e) => {
+        e.checked = selectAll.checked;
+    });
+
 }
 
 allCh.onclick = function () {

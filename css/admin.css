@@ -16,12 +16,14 @@ body { background: #f7f7f7; }
 .nav > li > a img { margin-right: 15px; width: 22px; } 
 /* ------------------------------------------------------ */
 
-.memSection { width: calc(100vw * 1300/ 1920); margin: 110px 0 0 22%; } 
+.memSection,
+.vidSection,
+.pstSection { width: calc(100vw * 1300/ 1920); margin: 110px 0 0 22%; } 
 
-.memListBox { margin-top: 20px; } 
-.memListBox #allCh { display: none; } 
-.memListBox #allCh + label { padding: 6px 12px; margin: 0 10px; border-radius: 7px; font-size: 14px; background-color: #bde0ff; cursor: pointer; transition: all .2s; } 
-.memListBox #allCh + label:hover { background-color: #92cafc; } 
+.listBox { margin-top: 20px; } 
+.listBox #allCh { display: none; } 
+.listBox #allCh + label { padding: 6px 12px; margin: 0 10px; border-radius: 7px; font-size: 14px; background-color: #bde0ff; cursor: pointer; transition: all .2s; } 
+.listBox #allCh + label:hover { background-color: #92cafc; } 
 
 .uptBtn, .delBtn { padding: 6px 12px; border-radius: 7px; font-size: 14px; font-family: pMedium; background: transparent; transition: all .2s; cursor: pointer; } 
 .uptBtn { margin-right: 10px; background-color: #ffe395; } 
@@ -38,11 +40,25 @@ body { background: #f7f7f7; }
 .listAll li ul { display: flex; align-items: center; justify-content: space-around; } 
 
 .listHead { display: flex; align-items: center; justify-content: space-around; margin-top: 20px; height: 50px; padding-left: 80px; background: url(../source/bgAdm.png) center center; background-size: cover; color: #fff; border-radius: 20px; font-family: pBold; } 
-.listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px; } 
+.listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px; text-align: center;} 
 
-.memberInfo li { width: 80px; text-align: center; } 
+.listRow .memberInfo,
+.pstInfo, .vidInfo { padding-left: 80px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; } 
+
+.memberInfo li,
+.pstInfo li,
+.vidInfo li { text-align: center; } 
 .memberInfo li:nth-child(4),
 .memberInfo li:nth-child(5) { width: 170px; } 
+
+.listHead.vid li:first-child,
+.listHead.pst li:first-child,
+.pstInfo li:first-child { width: 260px; }
+
+.listHead.vid li:nth-child(2),
+.vidInfo li:nth-child(2) { width: 110px;}
+
+.pstInfo li:nth-child(2) { width: 110px; }
 
 .listRow { position: relative; width: 100%; height: 60px; font-family: pLight; border-bottom: 1px solid #ddd; transition: all .25s; cursor: pointer; } 
 .listRow:hover { background-color: #e4e4e4; border-radius: 20px;}
@@ -51,8 +67,10 @@ body { background: #f7f7f7; }
 .listRow input[type="checkbox"] + label:hover { opacity: 1; } 
 .listRow input[type="checkbox"]:checked + label { background: url(../source/checkedIco.png) center center; background-size: cover; opacity: 1; } 
 
-.listRow .memberInfo,
-.pstInfo { padding-left: 80px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; } 
+.vidInfo .vidTitle { width: 260px; display: flex; align-items: center; justify-content: center;}
+.vidInfo .vidTitle img { width: 80px; margin-right: 10px;}
+.vidInfo .vidTitle div p:first-child { font-size: 15px; font-family: pSemi;}
+.vidInfo .vidTitle div p:last-child { font-size: 12px; font-family: pLight;}
 
 /* ------------------------------------------- */
 .pagination { margin-top: 20px; display: flex; align-items: center; justify-content: center; } 

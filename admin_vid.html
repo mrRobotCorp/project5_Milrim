@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="project5 Milrim">
@@ -19,18 +20,21 @@
     <link rel="icon" href="./source/favicon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="./source/apple-icon-180x180.png" sizes="180x180">
     <title>Milrim | 밀림</title>
-	<link href="./css/header.css" rel="stylesheet">
-	<link href="./css/admin.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/admin.css" rel="stylesheet">
 
 </head>
+
 <body>
-	<header>
+    <header>
         <nav>
             <ul class="gnb">
                 <li>
                     <a href="#"><img class="headLogo" src="./source/logo_noBg_b.png"></a>
                 </li>
-                <li><a href="#">밀림의 숲</a></li>
             </ul>
             <div class="mypageAll">
                 <div class="myProfile">
@@ -62,34 +66,91 @@
             </div>
         </nav>
     </header>
-	<div class="sidebar">
-		<ul class="nav">
-			<li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
-			<li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
-			<li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
-		</ul>
-	</div>
+    <div class="sidebar">
+        <ul class="nav">
+            <li><a href="./admin_mem.html"><img src="./source/memIco.png"> 회원 조회</a></li>
+            <li><a href="./admin_vid.html"><img src="./source/vidIco.png"> 영상 조회</a></li>
+            <li><a href="./admin_pst.html"><img src="./source/pstIco.png"> 게시물 조회</a></li>
+        </ul>
+    </div>
 
-	<section class="memSection">
-		<form method="post" class="memSchBox">
-			<input name="adm_memSch" placeholder="작품의 제목을 입력해주세요">
-			<button type="button"></button>
-		</form>
+    <section class="vidSection" id="users">
+        <form method="post" class="memSchBox schBox search">
+            <button type="button"></button>
+            <input name="adm_memSch" placeholder="작품의 제목을 검색">
+        </form>
 
-		<ul class="memberAll">
-			<li>
-				<ul class="listHead">
-					<li>회원 ID</li>
-					<li>회원명</li>
-					<li>이메일</li>
-					<li>전화번호</li>
-				</ul>
-			</li>
-		</ul>
+        <form method="post" class="listBox" id="test-list">
+            <span>
+                <input type="checkbox" name="vidOne" id="allCh">
+                <label for="allCh">전체 선택</label>
+            </span>
+            <button data-target="modal1" class="modal-trigger uptBtn">수정</button>
+            <button type="button" class="delBtn">삭제</button>
 
-	</section>
-	<script src="./js/admin.js"></script>
-	<script src="./js/header.js"></script>
-		
+            <ul class="listHead vid">
+                <li>영상 제목-썸네일 제목</li>
+                <li>영상 ID</li>
+                <li>업로드일</li>
+            </ul>
+
+            <ul class="listAll list">
+                <li class="oneRow">
+                    <ul class="listRow">
+                        <span>
+                            <input type="checkbox" name="vidOne" id="mem0" value="">
+                            <label for="mem0"></label>
+                        </span>
+                        <div class="vidInfo">
+                            <li class="vidTitle">
+                                <img src="./source/thumb03.jpg"> 
+                                <div>
+                                    <p>데스노트 리마스터링</p>
+                                    <p>총 39회</p>
+                                </div>
+                            </li>
+                            <li class="vidId">VID-059489</li>
+                            <li class="upload">2023-05-05</li>
+                        </div>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="pagination"></ul>
+        </form>
+
+        <!-- -------- 모달창 ------------ -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>회원 정보 수정</h4>
+                <form method="post" class="uptFrm">
+                    <div class="uptRow">
+                        <span class="uptSub">회원 ID</span>
+                        <input type="text" name="uptName" placeholder="memId">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">비밀번호</span>
+                        <input type="text" name="uptName" placeholder="memPw">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">이름</span>
+                        <input type="text" name="uptName" placeholder="name">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">이메일</span>
+                        <input type="text" name="uptName" placeholder="emailAdr">
+                    </div>
+                </form>
+            </div>
+            <button class="modal-close">수정</button>
+        </div>
+
+    </section>
+    <script src="./js/header.js"></script>
+    <script src="./js/materialize.js"></script>
+    <script src="./js/admin.js"></script>
+
+
 </body>
+
 </html>
