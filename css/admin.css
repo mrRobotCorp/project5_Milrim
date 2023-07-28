@@ -40,10 +40,12 @@ body { background: #f7f7f7; }
 .listAll li ul { display: flex; align-items: center; justify-content: space-around; } 
 
 .listHead { display: flex; align-items: center; justify-content: space-around; margin-top: 20px; height: 50px; padding-left: 80px; background: url(../source/bgAdm.png) center center; background-size: cover; color: #fff; border-radius: 20px; font-family: pBold; } 
+.listHead.vid { padding-left: 30px;}
 .listHead li { text-shadow: 0 0 4px #33333374; font-size: 16px; text-align: center; } 
 
 .listRow .memberInfo,
 .pstInfo, .vidInfo { padding-left: 80px; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-around; } 
+.vidInfo { padding-left: 30px;}
 
 .memberInfo li,
 .pstInfo li,
@@ -57,6 +59,9 @@ body { background: #f7f7f7; }
 
 .listHead.pst li:first-child,
 .pstInfo li:first-child { width: 260px; } 
+
+.listHead.pst li:nth-child(2),
+.pstInfo li:nth-child(2) { width: 110px;}
 .listHead.vid li:first-child { width: 310px; } 
 
 .listHead.vid li:nth-child(2), .vidInfo li:nth-child(2),
@@ -84,18 +89,19 @@ body { background: #f7f7f7; }
 .epShowBtn img {transition: all .3s; }
 .epShowBtn.active img { transform: rotate(180deg); }
 
-.epListAll::-webkit-scrollbar { height: 12px; } 
-.epListAll::-webkit-scrollbar-thumb { background-color: #555; border: 3px solid #f7f7f7; border-radius: 20px; } 
+.epListAll::-webkit-scrollbar { height: 13px; } 
+.epListAll::-webkit-scrollbar-thumb { background-color: #777; border: 3px solid #f7f7f7; border-radius: 20px; } 
 .epListAll::-webkit-scrollbar-track { background-color: #f7f7f7; } 
 
-.epListAll { display: none; align-items: center; padding: 10px 20px; height: 90px; background-color: #fff5da; overflow-x: auto; overflow-y: hidden;} 
+.epListAll { display: none; align-items: center; padding: 10px 20px; height: 90px; border-bottom: 1px solid #ddd; background-color: #fff5da; overflow-x: auto; overflow-y: hidden;} 
 .epListAll.active { display: flex; } 
 .epList { display: flex; align-items: center; } 
-.epList li { height: 40px; margin-right: 30px; padding: 15px; box-shadow: 1px 1px 5px #c4c4c498; background-color: #fff; border-radius: 15px; cursor: pointer; } 
+.epList li { width:max-content; height: 45px; margin-right: 30px; padding: 17px 20px; box-shadow: 1px 1px 5px #c4c4c498; background-color: #ffffffc4; border-radius: 15px; cursor: pointer; transition: all .3s;} 
+.epList li:hover { background: #ffffff; }
 .epList li p:first-child { font-size: 13px; color: #777; } 
-.epList li p { font-size: 14px; margin-bottom: 7px; } 
+.epList li p { font-size: 14px; margin-bottom: 10px; } 
 .epList li:last-child { text-align: center; } 
-.epList .addBtn { width: 40px; opacity: .7; transition: all .3s; } 
+.epList .addBtn { width: 40px; margin-top: 5px; opacity: .6; transition: all .3s; } 
 .epList .addBtn:hover { opacity: 1; } 
 
 /* ------------------------------------------- */

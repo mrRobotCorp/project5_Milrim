@@ -85,7 +85,9 @@
                 <input type="checkbox" name="memOne" id="allCh">
                 <label for="allCh">전체 선택</label>
             </span>
-            <button type="button" class="uptBtn">수정</button>
+            <!-- 
+                <button type="button" class="uptBtn">수정</button>
+            -->
             <button type="button" class="delBtn">삭제</button>
 
             <ul class="listHead mem">
@@ -120,41 +122,44 @@
         </form>
 
         <!-- -------- 모달창 ------------ -->
-        <div id="modal1" class="modal">
-            <div class="modalCon">
-                <button type="button" class="modal-close"></button>
-
-                <h4>회원 정보 수정</h4>
-                <form method="post" class="uptFrm">
-                    <div class="uptRow">
-                        <span class="uptSub">회원 ID</span>
-                        <input type="text" name="uptId" placeholder="memId">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">비밀번호</span>
-                        <input type="text" name="uptPw" placeholder="memPw">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">이름</span>
-                        <input type="text" name="uptName" placeholder="name">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">이메일</span>
-                        <input type="text" name="uptEmail" placeholder="emailAdr">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">전화번호</span>
-                        <input type="text" name="uptNumber" placeholder="pNumber">
-                    </div>
-                    <div class="uptRow">
-                        <span class="uptSub">권한</span>
-                        <input type="text" name="uptAuth" placeholder="author">
-                    </div>
-                </form>
+        <!--
+            <div id="modal1" class="modal">
+                <div class="modalCon">
+                    <button type="button" class="modal-close"></button>
+    
+                    <h4>회원 정보 수정</h4>
+                    <form method="post" class="uptFrm">
+                        <div class="uptRow">
+                            <span class="uptSub">회원 ID</span>
+                            <input type="text" name="uptId" placeholder="memId">
+                        </div>
+                        <div class="uptRow">
+                            <span class="uptSub">비밀번호</span>
+                            <input type="text" name="uptPw" placeholder="memPw">
+                        </div>
+                        <div class="uptRow">
+                            <span class="uptSub">이름</span>
+                            <input type="text" name="uptName" placeholder="name">
+                        </div>
+                        <div class="uptRow">
+                            <span class="uptSub">이메일</span>
+                            <input type="text" name="uptEmail" placeholder="emailAdr">
+                        </div>
+                        <div class="uptRow">
+                            <span class="uptSub">전화번호</span>
+                            <input type="text" name="uptNumber" placeholder="pNumber">
+                        </div>
+                        <div class="uptRow">
+                            <span class="uptSub">권한</span>
+                            <input type="text" name="uptAuth" placeholder="author">
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="modalUpt">수정</button>
+                
             </div>
-            <button type="button" class="modalUpt">수정</button>
             
-        </div>
+         -->
 
     </section>
     <script src="./js/header.js"></script>

@@ -120,7 +120,7 @@
                         <ul class="epList">
                             <li>
                                 <p>2023-07-12</p>
-                                <p>1회차의 제목 제목 1회차의 제목 제목 1회차의 제목 제목</p>
+                                <p>1회차의 제목 제목 1회차의 제목 제목</p>
                             </li>
                             <li>
                                 <p>2023-07-12</p>
@@ -141,6 +141,18 @@
                             <li>
                                 <p>2023-07-12</p>
                                 <p>3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목 3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목 3회차의 제목 제목</p>
+                            </li>
+                            <li>
+                                <p>2023-07-12</p>
+                                <p>3회차의 제목 제목 3회차의 제목 제목</p>
                             </li>
                             <li>
                                 <img class="addBtn" src="./source/addIco.png">
@@ -166,11 +178,23 @@
                         <input type="text" name="uptName" placeholder="영상의 제목 입력">
                     </div>
                     <div class="uptRow">
-                        <span class="uptSub">영상 ID</span>
-                        <input type="text" name="uptName" placeholder="영상 ID 입력">
+                        <span class="uptSub">썸네일</span>
+                        <input type="file" name="uptName" placeholder="업로드일 입력">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">영상물</span>
+                        <input type="file" name="uptName" placeholder="업로드일 입력">
                     </div>
                     <div class="uptRow">
                         <span class="uptSub">업로드일</span>
+                        <input type="text" name="uptName" placeholder="업로드일 입력">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">Number</span>
+                        <input type="text" name="uptName" placeholder="영상 ID 입력">
+                    </div>
+                    <div class="uptRow">
+                        <span class="uptSub">Value</span>
                         <input type="text" name="uptName" placeholder="업로드일 입력">
                     </div>
                 </form>
@@ -183,6 +207,7 @@
     <script src="./js/materialize.js"></script>
     <script src="./js/admin.js"></script>
     <script>
+
         var options = {
             valueNames: ['vidCheck', 'vidTitle', 'vidId', 'upload'],
             page: 5,
@@ -206,9 +231,12 @@
             });
         }
 
+        
+
         // -------------------- 회차 정보 --------------------
         const epBtn = document.querySelectorAll(".epShowBtn");
         const epList = document.querySelectorAll(".epListAll");
+        
 
         epBtn.forEach((e,i) => {
             e.onclick = function() {
@@ -216,7 +244,55 @@
                 epBtn[i].classList.toggle("active");
             }
         })
-        
+
+        // ----------------------- modal ---------------------------------
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector("body").insertAdjacentHTML("afterbegin", `
+                <div class="darkBg"></div>`);
+
+            const bg = document.querySelector(".darkBg");
+            const uptBtn = document.querySelector(".uptBtn");
+            const closeBtn = document.querySelector(".modal-close");
+            var elems = document.querySelector('.modal');
+            var instances = M.Modal.init(elems, options);
+            
+            var listRow = document.querySelectorAll(".listRow");
+
+            uptBtn.onclick = function() {
+                instances.open();
+                bg.classList.add("active");
+            }
+            
+            closeBtn.onclick = function() {
+                bg.classList.remove("active");
+            }
+
+            listRow.forEach((e) => {
+                e.ondblclick = function() {
+                    instances.open();
+                    bg.classList.add("active");
+                }
+            });
+
+            // ---- modal 영역 밖 클릭 시 닫기
+            document.addEventListener('mouseup', function(e) {
+                if(!elems.contains(e.target)) {
+                    instances.close();
+                    bg.classList.remove("active");
+                }
+            });
+
+            const ep = document.querySelectorAll(".epList li");
+            
+
+            ep.forEach((e) => {
+                e.onclick = function() {
+                    instances.open();
+                    bg.classList.add("active");
+                }
+            })
+
+        });
 
     </script>
 
