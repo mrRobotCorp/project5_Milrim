@@ -28,7 +28,8 @@ body { background: #f7f7f7; }
 .uptBtn, .delBtn { padding: 6px 12px; border-radius: 7px; font-size: 14px; font-family: pMedium; background: transparent; transition: all .2s; cursor: pointer; } 
 .uptBtn { margin-right: 10px; background-color: #ffe395; } 
 .uptBtn:hover { background-color: #ffd562; } 
-.delBtn { background-color: #ffc2b8; } 
+.dBtn { display: flex; justify-content: flex-end;}
+.delBtn { background-color: #ffc2b8; margin-right: 6px; } 
 .delBtn:hover { background-color: #ff9f91; } 
 
 .schBox { width: 95%; padding: 0 20px; display: flex; align-items: center; justify-content: flex-start; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease; } 
@@ -105,15 +106,20 @@ body { background: #f7f7f7; }
 .epList .addBtn:hover { opacity: 1; } 
 
 /* ------------------------------------------- */
-.pagination { margin-top: 20px; display: flex; align-items: center; justify-content: center; } 
-.pagination li { display: inline-block; margin: 0 3px; border-radius: 3px; text-align: center; vertical-align: top; height: 25px; transition: all .2s; } 
+.ppp { margin-top: 20px; display: flex; align-items: center; justify-content: center; } 
+/* .pagination li { display: inline-block; margin: 0 3px; border-radius: 3px; text-align: center; vertical-align: top; height: 25px; transition: all .2s; } 
 .pagination li:hover { background-color: #ddd; } 
 
 .pagination li a { display: inline-block; font-size: 15px; padding: 0 8px; line-height: 25px; } 
 .pagination li.active { background-color: var(--color-main); } 
 .pagination li.active a { color: #fff; } 
 
-.pagination li.pages ul li { display: inline-block; float: none; } 
+.pagination li.pages ul li { display: inline-block; float: none; }  */
+
+.ppp .pBtn { margin: 0 10px; width: 15px; height: 15px; cursor: pointer; opacity: .5; transition: all .2s;}
+.ppp .pBtn:hover { opacity: 1;}
+.ppp .prevBtn { background: url(../source/arrow_l.png) center center; background-size: cover;}
+.ppp .nextBtn { background: url(../source/arrow_r.png) center center; background-size: cover;}
 
 /* ------------------- modal ---------------------- */
 .modal { display: none; position: fixed; left: 0; right: 0; background-color: #fff; padding: 30px 20px; max-height: 70%; width: 450px; margin: auto; overflow-y: auto; border-radius: 10px; will-change: top, opacity; box-shadow: 1px 1px 18px #b8b8b874; } 
