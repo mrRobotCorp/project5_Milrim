@@ -1,3 +1,8 @@
+.mypageAll { display: flex; align-items: center;  }
+.wBtn { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin-right: 30px; padding: 3px; border-radius: 5px; cursor: pointer; transition: all .25s; }
+.wBtn:hover { background-color: #ffd56275;}
+.writeBtn { width: 25px; height: 25px; background: url(../source/writeIco.png) center center; background-size: cover; cursor: pointer; }
+
 section { padding-top: 100px; width: calc(100vw * 1100 / 1920); margin: 0 auto 70px auto; } 
 section .postSchBox { margin-bottom: 27px; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 50px; border-radius: 30px; background: #e0e0e0; border: 2px solid transparent; transition: all .3s ease; } 
 section .postSchBox input { width: 90%; background: transparent; font-size: 15px; font-family: pMedium; } 
