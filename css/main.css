@@ -8,7 +8,6 @@ section.banner .bn { height: 80vh; margin: 80px 0 50px 0; }
 .bContent04 { background: url(../source/banner04.jpg) center center; background-size: cover; }
 .bContent05 { background: url(../source/banner05.jpg) center center; background-size: cover; }
 
-.bContent p { margin-left: 200px; color: #fff; text-shadow: 1px 1px 4px #33333393; font-size: 27px; font-family: pBold; }
 
 /* ------------------ search --------------------- */
 section.inner { width: calc(100vw * 1500 / 1920 ); margin: 0 auto; }
@@ -41,3 +40,8 @@ input[name="tag"]:checked+label {
 .dayListAll .dayList a { margin-bottom: 10px; display: flex; align-items: center; justify-content: center; width: calc(100vw * 170 / 1920); height: calc(100vw * 110 / 1920); border-radius: 6px;  overflow: hidden; }
 .dayListAll .dayList .thumbnail { height: 100%; transition: all .3s;}
 .dayListAll .dayList a:hover .thumbnail { height: 110%; }
+
+/* -- 줄바꿈 수정 -- */
+.dayList ul li span { display: inline-block; width: 140px; margin-bottom: 10px; }
+.bContent img { margin-left: 180px; width: 600px; }
+.bContent05 img { margin-left: 280px;}
