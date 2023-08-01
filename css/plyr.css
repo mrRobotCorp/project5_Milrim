@@ -995,7 +995,11 @@ a.plyr__control:before {
     margin: auto;
     overflow: hidden;
     position: relative;
-    width: 100%
+    width: calc(100vw * 1370 / 1920 );
+}
+
+.plyr__video-wrapper.active {
+    width: 100%;
 }
 
 .plyr__video-embed,
