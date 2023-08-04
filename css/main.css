@@ -43,3 +43,8 @@ input[name="tag"]:checked+label {
 
 .bContent img { margin-left: 180px; width: 600px; }
 .bContent05 img { margin-left: 280px;}
+
+/* -----------관리자 버튼 추가-------------- */
+.navRight { display: flex; align-items: center;}
+.navRight .abminBtn { margin-right: 20px; width: 60px; height: 32px; background: #eee; border-radius: 7px; font-family: pMedium; font-size: 14px; transition: all .2s; cursor: pointer;}
+.navRight .abminBtn:hover { background: #ddd; }
