@@ -86,7 +86,7 @@
                 <label for="allCh">전체 선택</label>
             </span>
             <button type="button" class="uptBtn">수정</button>
-            <button type="button" class="delBtn">삭제</button>
+            <button type="button" class="delBtn" ondblclick="listMd()">삭제</button>
 
             <ul class="listHead vid">
                 <li>영상 제목</li>
@@ -167,9 +167,9 @@
         </form>
 
         <!-- -------- 모달창 ------------ -->
-        <div id="modal1" class="modal">
+        <div class="md">
             <div class="modalCon">
-                <button type="button" class="modal-close"></button>
+                <button type="button" class="mdClose"></button>
                 
                 <h4>영상 정보 수정</h4>
                 <form method="post" class="uptFrm">
@@ -204,9 +204,19 @@
 
     </section>
     <script src="./js/header.js"></script>
-    <script src="./js/materialize.js"></script>
+    
     <script src="./js/admin.js"></script>
     <script>
+        document.querySelector("body").insertAdjacentHTML("afterbegin", `
+                <div class="darkBg"></div>`);
+
+        var md = document.querySelector(".md");
+        var bg = document.querySelector(".darkBg");
+
+        function listMd() {
+            md.classList.add("active");
+            bg.classList.add("active");
+        }
 
         var options = {
             valueNames: ['vidCheck', 'vidTitle', 'vidId', 'upload'],
@@ -232,6 +242,7 @@
         }
 
         
+        
 
         // -------------------- 회차 정보 --------------------
         const epBtn = document.querySelectorAll(".epShowBtn");
@@ -247,37 +258,39 @@
 
         // ----------------------- modal ---------------------------------
         document.addEventListener('DOMContentLoaded', function () {
-            document.querySelector("body").insertAdjacentHTML("afterbegin", `
-                <div class="darkBg"></div>`);
-
+            
+            
+            const md = document.querySelector(".md");
             const bg = document.querySelector(".darkBg");
             const uptBtn = document.querySelector(".uptBtn");
-            const closeBtn = document.querySelector(".modal-close");
-            var elems = document.querySelector('.modal');
-            var instances = M.Modal.init(elems, options);
+            const closeBtn = document.querySelector(".mdClose");
             
             var listRow = document.querySelectorAll(".listRow");
 
             uptBtn.onclick = function() {
-                instances.open();
+                md.classList.add("active");
                 bg.classList.add("active");
             }
             
             closeBtn.onclick = function() {
+                md.classList.remove("active");
                 bg.classList.remove("active");
             }
 
             listRow.forEach((e) => {
                 e.ondblclick = function() {
-                    instances.open();
+                    md.classList.add("active");
                     bg.classList.add("active");
                 }
             });
 
+            
+
+            
             // ---- modal 영역 밖 클릭 시 닫기
             document.addEventListener('mouseup', function(e) {
-                if(!elems.contains(e.target)) {
-                    instances.close();
+                if(!md.contains(e.target)) {
+                    md.classList.remove("active");
                     bg.classList.remove("active");
                 }
             });
@@ -287,7 +300,7 @@
 
             ep.forEach((e) => {
                 e.onclick = function() {
-                    instances.open();
+                    md.classList.add("active");
                     bg.classList.add("active");
                 }
             })
