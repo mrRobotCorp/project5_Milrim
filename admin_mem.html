@@ -33,7 +33,7 @@
         <nav>
             <ul class="gnb">
                 <li>
-                    <a href="#"><img class="headLogo" src="./source/logo_noBg_b.png"></a>
+                    <a href="./main.html"><img class="headLogo" src="./source/logo_noBg_b.png"></a>
                 </li>
             </ul>
             <div class="mypageAll">
@@ -172,13 +172,13 @@
             pagination: true
         };
 
-        var userList = new List('users', options);  
+        var userList = new List('users', options);
 
 
         // --- 임시 데이터 생성 -----
         for (let i = 1; i <= 20; i++) {
             userList.add({
-                memCheck: `<input type="checkbox" name="memOne" id="mem` + i + `" value="user`+ i +`">
+                memCheck: `<input type="checkbox" name="memOne" id="mem` + i + `" value="user` + i + `">
                 <label for="mem` + i + `"></label>`,
                 memId: "thisisid" + i,
                 memPw: "pww100" + i,
