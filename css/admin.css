@@ -78,7 +78,7 @@ body { background: #f7f7f7; }
 .listRow input[type="checkbox"] + label:hover { opacity: 1; } 
 .listRow input[type="checkbox"]:checked + label { background: url(../source/checkedIco.png) center center; background-size: cover; opacity: 1; } 
 
-.vidCheck input[type="checkbox"] + label { top: 50px; left: 70px; } 
+.vidCheck input[type="checkbox"] + label { top: 50px; left: 50px; } 
 
 .vidInfo .vidTitle { width: 310px; display: flex; align-items: center; justify-content: center; text-align: left; } 
 .vidInfo .vidTitle img { width: 140px; margin-right: 15px; border-radius: 10px; border: 1px solid #e6e6e6; } 
@@ -143,3 +143,6 @@ body { background: #f7f7f7; }
 
 .darkBg { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #00000031; z-index: 10; } 
 .darkBg.active { display: block; } 
+
+
+.vtTxt { width: 150px;}
